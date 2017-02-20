@@ -1,2 +1,4 @@
 name: April Gray
 markdown: kramdown
+gems:
+  - jekyll-sitemap
