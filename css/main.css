@@ -45,15 +45,3 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
-/*** FONTS ***/
-
-/* Font to be used for headers */
-.hFont {
-    font-family: 'Cantata One', serif;
-}
-
-/* Font to be used for paragraphs */
-.pFont{
-    font-family: 'Imprima', sans-serif;
-}
