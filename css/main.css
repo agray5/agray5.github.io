@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background: url(img/wave.png) repeat 0 0;
 }
 
 nav ul, footer ul {
