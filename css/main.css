@@ -23,7 +23,7 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-     font-family: 'Cantata One', serif;
+    font-family: 'Cantata One', serif;
 }
 p {
     font-size: 1.5em;
@@ -44,4 +44,8 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.hFont {
+    font-family: 'Cantata One', serif;
 }
