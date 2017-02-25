@@ -53,6 +53,17 @@ ul.posts li {
     list-style: none;
 }
 
+#wolf{
+    position: relative;
+    float: left;
+
+}
+
+.blurb{
+    position: relative;
+    float: left;
+}
+
 /** FONTS **/
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cantata One', serif;
