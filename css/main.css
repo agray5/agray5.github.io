@@ -55,7 +55,8 @@ ul.posts li {
 
 #wolf{
     position: absolute;
-    top: 30%;
+    bottom: 30 px;
+    left: 20 px;
 }
 
 .blurb{
