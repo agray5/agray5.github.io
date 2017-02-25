@@ -54,9 +54,11 @@ ul.posts li {
 }
 
 #wolf{
-    position: absolute;
-    bottom: 0 px;
-    left: 0 px;
+    position: relative;
+    float: left;
+    height: 40%;
+    width: auto;
+    margin-right: 100px;
 }
 
 .blurb{
