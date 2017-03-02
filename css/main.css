@@ -79,8 +79,7 @@ ul.posts li {
 /* Paragraph on home page */
 .blurb{
     position: relative;
-    float: left;
-    display: inline-block;
+    float: right;
     vertical-align: middle;
 }
 
