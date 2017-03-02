@@ -75,6 +75,9 @@ ul.posts li {
 
 #wolf{
     align-self: flex-end;
+    height: 70%;
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 
 #homeWrapper{
@@ -83,6 +86,8 @@ ul.posts li {
     border: 1px solid red;
     min-height: 100vh;
     max-height: 100vh;
+    min-width: 100vw;
+    max-height: 100vw;
 }
 /** CLASSES **/
 
