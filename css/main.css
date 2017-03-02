@@ -85,10 +85,8 @@ ul.posts li {
     flex-direction: row;
     flex: 1;
     border: 1px solid red;
-    min-height: 100vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-height: 100vw;
+    width: 100%;
+    height: 100%
 }
 /** CLASSES **/
 
@@ -104,9 +102,12 @@ ul.posts li {
   flex-direction: column;
 }
 
-
-.twoColumn{
-
+.container{
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
 }
 
 /** FONTS **/
