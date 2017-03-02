@@ -81,6 +81,8 @@ ul.posts li {
     display: flex;
     flex: 1;
     border: 1px solid red;
+    min-height: 100vh;
+    max-height: 100vh;
 }
 /** CLASSES **/
 
