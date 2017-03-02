@@ -64,18 +64,19 @@ ul.posts li {
 /** IDS **/
 
 #wolf{
+    max-width: 100%
 }
 
 /** CLASSES **/
 
 /* Paragraph on home page */
 .blurb{
-    
+    display:inline-block;
 }
 
 .twoColumn{
     width: 49%;
-    float:left;
+    float: left;
     border: 1px solid red;
 }
 
