@@ -64,10 +64,6 @@ ul.posts li {
 /** IDS **/
 
 #wolf{
-    position: absolute;
-    bottom: 5%;
-    top: 20%;
-    left: 20px;
 }
 
 /** CLASSES **/
@@ -80,6 +76,7 @@ ul.posts li {
 .twoColumn{
     width: 49%;
     float:left;
+    border: 1px solid red;
 }
 
 /** FONTS **/
