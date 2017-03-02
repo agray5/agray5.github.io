@@ -50,6 +50,17 @@ p {
     color: #333;
 }
 
+@media only screen and (max-width: 768px) {
+    /* smaller text for smaller screens*/
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1em;
+    }
+}
+
 /** LISTS **/
 
 ul.posts { 
@@ -64,18 +75,21 @@ ul.posts li {
 /** IDS **/
 
 #wolf{
-    max-width: 100%
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 /** CLASSES **/
 
 /* Paragraph on home page */
 .blurb{
-    display:inline-block;
+    margin:auto;
 }
 
 .twoColumn{
     width: 49%;
+    max-height: 100%;
     float: left;
     border: 1px solid red;
 }
