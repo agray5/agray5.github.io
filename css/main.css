@@ -68,19 +68,18 @@ ul.posts li {
     bottom: 5%;
     top: 20%;
     left: 20px;
-    max-width: 100%;
-    height: 70%;
-    width: auto;
-
 }
 
 /** CLASSES **/
 
 /* Paragraph on home page */
 .blurb{
-    position: relative;
-    float: right;
-    vertical-align: middle;
+    display:inline-block;
+}
+
+.twoColumn{
+    width: 49%;
+    float:left;
 }
 
 /** FONTS **/
