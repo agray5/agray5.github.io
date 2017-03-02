@@ -85,14 +85,13 @@ ul.posts li {
 
 /* Paragraph on home page */
 .blurb{
-    margin:auto;
+    margin-top: 40%;
 }
 
 .twoColumn{
-    width: 49%;
+    width: 50%;
     height: 100%;
     float: left;
-    border: 1px solid red;
 }
 
 /** FONTS **/
