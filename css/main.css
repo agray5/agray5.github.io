@@ -1,17 +1,16 @@
 /* Background pattern from Subtle Patterns */
 body {
     background: url(/img/wave.png) repeat 0 0 fixed;
-    overflow: hidden;
 }
 
 /** NAV and FOOTER **/
-nav ul, footer ul {
+header ul, footer ul {
     padding: 0px;
     margin-left: 20px;
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+header ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
@@ -79,10 +78,9 @@ ul.posts li {
 }
 
 #homeWrapper{
-    display: inline-flex;
+    display: flex;
+    flex: 1;
     border: 1px solid red;
-    width: 100%;
-    height: 100%;
 }
 /** CLASSES **/
 
@@ -90,6 +88,13 @@ ul.posts li {
 .blurb{
     align-self: center;
 }
+
+.flex {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 
 .twoColumn{
 
