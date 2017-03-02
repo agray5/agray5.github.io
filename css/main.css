@@ -82,6 +82,7 @@ ul.posts li {
 
 #homeWrapper{
     display: flex;
+    flex-direction: row;
     flex: 1;
     border: 1px solid red;
     min-height: 100vh;
@@ -99,6 +100,7 @@ ul.posts li {
 .flex {
   display: flex;
   min-height: 100vh;
+  min-width: 100vw;
   flex-direction: column;
 }
 
