@@ -4,7 +4,7 @@ body {
     overflow: hidden;
 }
 
-/* NAV and FOOTER */
+/** NAV and FOOTER **/
 nav ul, footer ul {
     padding: 0px;
     margin-left: 20px;
@@ -23,11 +23,13 @@ footer {
     bottom : 0;
 }
 
-/* ICONS */
+/** ICONS **/
 
 i {
     margin: 5px;
 }
+
+/** LINKS **/
 
 a {
     text-decoration: none;
@@ -36,6 +38,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/** HEADERS and PARAGRAPHS **/
+
 h1 {
     font-size: 3em;
 }
@@ -45,6 +50,8 @@ p {
     color: #333;
 }
 
+/** LISTS **/
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
@@ -53,6 +60,8 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+/** IDS **/
 
 #wolf{
     position: absolute;
@@ -65,10 +74,14 @@ ul.posts li {
 
 }
 
+/** CLASSES **/
+
+/* Paragraph on home page */
 .blurb{
     position: relative;
     float: left;
-    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /** FONTS **/
