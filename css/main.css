@@ -4,6 +4,11 @@ body {
 }
 
 /** NAV and FOOTER **/
+
+nav{
+    flex: 1 100%;
+}
+
 nav ul, footer ul {
     padding: 0px;
     margin-left: 20px;
