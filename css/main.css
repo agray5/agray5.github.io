@@ -4,7 +4,7 @@ body {
 }
 
 /** NAV and FOOTER **/
-nav ul, footer ul {
+footer ul {
     padding: 0px;
     margin-left: 20px;
     list-style: none;
