@@ -138,16 +138,20 @@ p, div, a {
 
 /** 404 PAGE **/
 #error404Wrapper{
+    height: 100%;
     color: silver;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-between;
     background: rgba(0, 0, 0, 0.5);
 }
 
 #error404Wrapper h1, #error404Wrapper p, #error404Wrapper img{
     align-self: center;
+}
+
+#wolfGif{
+    margin: 50px 0;
 }
 
 #moon0{
