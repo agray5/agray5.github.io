@@ -29,6 +29,12 @@ footer {
     z-index: 20;
 }
 
+.navbar{
+    margin: 0;
+    color: silver;
+    background-color: lightgray;
+}
+
 /** ICONS **/
 
 i {
