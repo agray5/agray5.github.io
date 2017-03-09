@@ -135,3 +135,15 @@ h1, h2, h3, h4, h5, h6 {
 p, div, a {
     font-family: 'Imprima', sans-serif;
 }
+
+/** 404 PAGE **/
+#404Wrapper{
+    height: 100%;
+    width: 100%;
+    color: silver;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
