@@ -33,11 +33,12 @@ footer {
     margin: 0;
     color: silver;
     background-color: lightgray;
+    background-image: url("/img/noise.png") repeat;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: black;
-    color: inherited;
+    color: blue;
     text-decoration: underline;
 }
 
