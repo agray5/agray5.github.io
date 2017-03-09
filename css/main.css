@@ -26,6 +26,7 @@ footer {
     font-size: .8em;
     position: absolute;
     bottom : 0;
+    z-index: 20;
 }
 
 /** ICONS **/
@@ -172,10 +173,6 @@ p, div, a {
 
 .stars, .twinkling {
   position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:10px;
   width:100%;
   height:100%;
   display:block;
