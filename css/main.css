@@ -144,6 +144,7 @@ p, div, a {
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
 }
 
 #moon0{
