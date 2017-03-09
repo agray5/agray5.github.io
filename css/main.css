@@ -37,8 +37,8 @@ footer {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: black;
-    color: blue;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #00E5EE;
     text-decoration: underline;
 }
 
