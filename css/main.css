@@ -148,10 +148,11 @@ p, div, a {
 #error404Wrapper h1, #error404Wrapper p, #error404Wrapper img{
     align-self: center;
     color: silver;
+    z-index: 20;
 }
 
 #error404Wrapper h1{
-    font-size: 50px;
+    font-size: 100px;
 }
 
 #wolfGif{
@@ -170,11 +171,6 @@ p, div, a {
 }
 
 .stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
   width:100%;
   height:100%;
   display:block;
