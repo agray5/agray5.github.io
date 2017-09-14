@@ -2,13 +2,13 @@
 title: April Gray
 email: grayaprild@gmail.com
 github_username: agray5
-url: "https://agray5.github.io"
+url: "http://localhost:3000"
 baseurl: ""
 
 # Build settings
 permalink: 'pretty'
 include: ['_pages']
-exclude: ['Gemfile', 'Gemfile.lock', README.md']
+exclude: ['Gemfile', 'Gemfile.lock', 'node_modules', 'package.json', 'gulpfile.js', 'README.md']
 gems: ['jekyll-sitemap']
 
 # Style settings

@@ -1,0 +1,132 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+    <div class="projectsWrapper">
+
+        <div class="vertCollapse">
+            <ul style="display:none">
+                <div class="header">
+                    <h4>Project List</h4>
+                </div>
+                <li><a href="https://agray5.github.io/CustomizableCalender/" target="iframeProject">Calender</a></li>
+            </ul>
+            <div class="collapseArrow rightArrow glyphicon glyphicon-chevron-right"></div>
+        </div>
+
+        <div class="iframeWrap">
+            <iframe scrolling="no" frameborder="0" allowTransparency="true" name="iframeProject">
+              <p>Your browser does not support iframes.</p>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+
+        function keyDownTextField(e) {
+            var keyCode = e.keyCode;
+            if(keyCode==16) {
+                let iframe = $(".iframeWrap iframe");
+                iframe.hasClass('maximize') ? iframe.removeClass('maximize') : iframe.addClass('maximize');
+                $("div.content").hasClass('maximize') ? iframe.removeClass('maximize') : iframe.addClass('maximize');
+                //console.log("maximizing", iframe.hasClass('maximize'), $("div.content").hasClass('maximize'));
+            }
+        }
+
+        function msg(){
+            let div = $("<div>", {"class": "messageBox"});
+            div.append('To maximize press shift');
+
+            setTimeout(function() {
+                div.remove();
+            }, 3000);
+
+            $(".projectsWrapper").append(div);
+        }
+
+        function toggleVertNav(toggle = null){
+            let sel     =  ".collapseArrow";
+            let open    =  $(sel).hasClass('leftArrow');        //leftArrow class means element is open
+            let ulWidth =  $(".vertCollapse ul").css('width');  //Used for moving arrow div
+            let dir, dirOpp;                                    //Determine direction to replace
+
+            //Set open
+            if ((toggle === null && open) || toggle === false)
+                open = false;
+            else
+                open = true;
+
+            //Set direcion of arrows
+            dir    =  open ? 'left' : 'right';
+            dirOpp = !open ? 'left' : 'right';
+
+            $(sel).addClass(`${dir}Arrow`);
+            $(sel).addClass(`glyphicon-chevron-${dir}`);
+            $(sel).removeClass(`${dirOpp}Arrow`);
+            $(sel).removeClass(`glyphicon-chevron-${dirOpp}`);
+
+            //Hide/open side menu
+            $(".vertCollapse ul").css({
+                display: open ? "block" : "none"
+            });
+
+            //Move arrow
+            $(sel).css({
+                left: open ? ulWidth : 0
+            });
+        }
+
+        function toggleMaxIframe(toggle = null) {
+            console.log("toggle maxframe");
+            let sel      = $(".iframeWrap");
+            let selChild = $(".iframeWrap iframe");
+            let isMax    = sel.hasClass('maximize');
+
+            if ((toggle === null && isMax) || false) { //Minimize iFrame
+                sel.css({
+                    height   : "100vh",
+                    width    : "100vw",
+                    "z-index": 3,
+                });
+                selChild.css({
+                    height : "133.3333vh",
+                    width  : "133.3333vw",
+                })
+            }
+            else {
+                sel.css({
+                    height   : "100%",
+                    width    : "100%",
+                    "z-index": 0,
+                });
+                selChild.css({
+                    height : "133.3333%",
+                    width  : "133.3333%",
+                })
+            }
+        }
+
+        $(".collapseArrow").on("click", () => {
+            toggleVertNav();
+        });
+
+        //display message whenever a project is clicked
+        $(".vertCollapse li").on("click", () => {
+            //msg();
+            toggleVertNav(false);
+        });
+
+/*
+        //Allow newly loaded iframe to access keydown events
+        $(".iframeWrap iframe").on("load", () => {
+            $(".iframeWrap iframe").get(0).contentWindow.document.addEventListener("keydown", keyDownTextField);
+        });
+*/
+        //$(document).on("keydown", keyDownTextField);
+
+        $(document).ready(function() {
+            toggleVertNav();
+        });
+    </script>

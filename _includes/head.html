@@ -1,0 +1,19 @@
+<head>
+    <!-- metadata -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- canonical -->
+    <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
+    {% include bootstrapFallbackToLocal.html %}
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+    <!-- link to google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cantata+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/font-awesome.css">
+    {% include analytics.html %}
+</head>

@@ -1,0 +1,334 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    z-index: $layer-0;
+}
+
+/* Background pattern from Subtle Patterns */
+body {
+    background: url("../img/wave.png") repeat 0 0 fixed;
+    overflow: hidden;
+}
+/** NAV and FOOTER **/
+nav {
+    flex: 1 100%;
+
+    ul {
+        padding: 0;
+        margin-left: 20px;
+        list-style: none;
+        font-weight: bold;
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+    }
+}
+
+footer {
+    height: $footer-height;
+    border-top: 1px solid $footer-color;
+    color: $footer-color;
+    font-size: 0.8em;
+    position: absolute;
+    z-index: $layer-1;
+
+    ul {
+        padding: 0;
+        margin-left: 20px;
+        list-style: none;
+        font-weight: bold;
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: $header-height;
+    margin: 0;
+    color: $text-color;
+    background-color: $second-color;
+    background-image: url("../img/noise.png");
+}
+
+.navbar-default .navbar-nav > li > a {
+    &:focus,
+    &:hover {
+        color: $hover-color;
+        text-decoration: underline;
+    }
+}
+
+.content {
+    height: $content-height;
+}
+
+/** ICONS **/
+i {
+    margin: 5px;
+}
+/** LINKS **/
+a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+        color: $hover-color;
+        text-decoration: underline;
+    }
+}
+/** HEADERS and PARAGRAPHS **/
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+/** LISTS **/
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+
+    li {
+        list-style: none;
+        max-width: 100%;
+    }
+}
+/* Home Page */
+#wolf {
+    align-self: flex-end;
+    height: 70%;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 768px) {
+    /* smaller wolf for smaller screens*/
+    #wolf {
+        height: 40%;
+    }
+}
+
+#homeWrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+}
+
+.blurb {
+    align-self: center;
+}
+
+/** FONTS **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cantata One', serif;
+}
+
+a,
+div,
+p {
+    font-family: 'Imprima', sans-serif;
+}
+/** 404 PAGE **/
+#error404Wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.7);
+
+    h1,
+    img,
+    p {
+        align-self: center;
+        color: $second-color;
+        z-index: 20;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+}
+
+#wolfGif {
+    margin: 50px 0;
+}
+
+#moon0 {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stars,
+.twinkling {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url("http://www.script-tutorials.com/demos/360/images/stars.png") repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url("http://www.script-tutorials.com/demos/360/images/twinkling.png") repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+/* About */
+.aboutWrapper {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+
+    ul {
+        list-style: none;
+        font-size: 20px;
+        height: 100%;
+    }
+}
+/* Projects */
+.projectsWrapper {
+    height: 100%;
+    position: relative;
+}
+/* Collapse Menu */
+.vertCollapse {
+    $arrow-width: 20px;
+    $ul-width: calc(100% - #{$arrow-width});
+    $opacity: 0.85;
+    position: relative;
+    height: 100%;
+    width: 9%;
+    max-width: 200px;
+    z-index: $layer-1;
+
+    ul {
+        margin: 0;
+        overflow-y: auto;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        width: $ul-width;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to bottom, rgba($upper-gradient-color, $opacity) 0%, rgba($lower-gradient-color, $opacity) 100%);
+        list-style: none;
+        color: white;
+    }
+
+    @include not-last-child('li') {
+        border-bottom: 1px solid #fff;
+    }
+
+    li {
+        @include engraved-text;
+        margin: 10px 0;
+        padding: 3px;
+        cursor: pointer;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+
+    }
+
+    & .collapseArrow {
+        position: absolute;
+        left: 0;
+        width: $arrow-width;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(#A095AB, $opacity);
+        color: $second-color;
+        padding: 5px;
+        border-radius: 0 5px 5px 0;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+.iframeWrap {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    iframe {
+        width: 133.3333%;
+        height: 133.3333%;
+        transform: scale(0.75);
+        transform-origin: 0 0;
+    }
+}
+
+.messageBox {
+    $opacity: .90;
+    position: absolute;
+    box-shadow: 0px 0px 17px 2px rgba($hover-color, $opacity);
+    border-radius: 5px;
+    padding: 20px;
+    top:10%;
+    right:10%;
+    //background: radial-gradient(ellipse at center, rgba(#444, $opacity) 1%,rgba(#444, $opacity) 70%,rgba($hover-color, .20) 100%);
+    background-color:rgba(#444, $opacity);
+    color: Silver;
+}
+/* Utility Classes*/
+.maximize{
+    z-index: $layer-3;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Media Queries*/
+@media only screen and (max-width: 768px) {
+    /* smaller text for smaller screens*/
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1em;
+    }
+}
