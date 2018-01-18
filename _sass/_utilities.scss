@@ -182,6 +182,20 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
+  @include breakpoint($medium){
+    position: absolute;
+    right: 0;
+  }
+  @include breakpoint($large){
+    position: absolute;
+    right: 0;
+  }
+  @include breakpoint($x-large){
+    position: absolute;
+    right: 0;
+  }
+
+
   .fa {
     color: #000;
   }
