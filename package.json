@@ -21,7 +21,7 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.3",
+    "browser-sync": "^2.23.5",
     "concurrently": "^3.5.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "node-sass": "^4.7.2",
