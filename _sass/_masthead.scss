@@ -1,0 +1,67 @@
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+.masthead {
+  position: relative;
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  z-index: 20;
+  background-color: lighten($primary-color, 5%);
+
+  border-bottom: 3px solid #444444;
+
+  &:after {
+    content: "";
+    background-image: url("../../images/noise.png");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__inner-wrap {
+    @include container;
+    @include clearfix;
+    padding: .5em .5em .5em;
+    font-family: $sans-serif-narrow;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+
+    nav {
+      z-index: 10;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.masthead__menu {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    list-style-type: none;
+  }
+}
+
+.masthead__menu-item {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
+  }
+}
