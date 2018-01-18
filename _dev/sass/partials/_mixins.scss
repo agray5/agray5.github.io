@@ -1,9 +1,0 @@
-@mixin not-last-child($selector) {
-  & #{$selector}:not(:last-child) {
-    @content;
-  }
-}
-
-@mixin engraved-text {
-    text-shadow: 0px 1px 0px #ccc;
-}
