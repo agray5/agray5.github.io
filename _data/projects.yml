@@ -3,10 +3,10 @@
   url: "https://agray5.github.io/Weather-Widget/"
   repo: "https://github.com/agray5/Weather-Widget"
 
-- title: "Customizable Calender"
+- title: "Calender"
   desc: "Monthly calender that can record events. It is written in JS using Jquery."
-  url: "https://agray5.github.io/CustomizableCalender/"
-  repo: "https://github.com/agray5/CustomizableCalender"
+  url: "https://agray5.github.io/Calender/"
+  repo: "https://github.com/agray5/Calender"
 
 - title: "Tic-Tac-Toe"
   desc: "Game of tic-tac-toe written in Java Processing."
