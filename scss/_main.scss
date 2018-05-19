@@ -1,0 +1,53 @@
+#about {
+    background-color: black;//linear-gradient(to right, #000000, #434343);
+    background:  linear-gradient(to right, black, 70%,  transparent), 
+    url("../img/stars.jpg") no-repeat center center fixed;
+    //background-repeat: no-repeat;
+    //background-position: center center fixed;
+    background-size: cover; 
+    //background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+    & #aboutDesc{
+        width: 60%;
+    }
+
+}
+
+#interests{
+    background: url("../img/dragon.jpg") no-repeat center center;//fixed;
+    background-size: cover;
+
+
+    & #interestsBlub {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        & #interestsText {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: black;
+        }
+    }
+}
+
+
+.blur {
+    background: url('../img/dragon.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(13px);
+    position: absolute;
+    height: 210px;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    
+  }
+  
