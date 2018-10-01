@@ -20,20 +20,25 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import styled from 'styled-components';
 
+import wolf from 'images/wolf.jpg';
 
 /* eslint-disable react/prefer-stateless-function */
 class HomePage extends React.Component {
 
   render() {
     return (
-      <StyledBar position="static" color="default">
-        <Toolbar>
-          <IconButton color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </StyledBar>
+      <Root id="root">
+        <StyledBar position="static" color="default">
+          <Toolbar>
+            <IconButton color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </StyledBar>
+        <StyledImg src={wolf} />
+      </Root>
     );
   }
 }
@@ -48,3 +53,15 @@ let StyledBar = withStyles({
     background: 'none'
   }
 })(AppBar);
+
+const Root = styled.div`
+  background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(8,8,10,1) 100%);
+`;
+
+const StyledImg = styled.img`
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+`;
