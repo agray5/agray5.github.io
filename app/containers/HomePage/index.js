@@ -22,7 +22,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import styled from 'styled-components';
 
-import wolf from 'images/wolf.jpg';
+import wolf from 'images/wolf-min.png';
 
 /* eslint-disable react/prefer-stateless-function */
 class HomePage extends React.Component {
@@ -37,7 +37,8 @@ class HomePage extends React.Component {
             </IconButton>
           </Toolbar>
         </StyledBar>
-        <StyledImg src={wolf} />
+        {//<StyledImg src={wolf} />
+        }
       </Root>
     );
   }
@@ -54,9 +55,7 @@ let StyledBar = withStyles({
   }
 })(AppBar);
 
-const Root = styled.div`
-  background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(8,8,10,1) 100%);
-`;
+const Root = styled.div``;
 
 const StyledImg = styled.img`
   height: 50%;

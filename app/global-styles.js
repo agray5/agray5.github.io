@@ -25,6 +25,7 @@ injectGlobal`
   body {
     font-family: 'calendas_plusregular', Helvetica, Arial, sans-serif;
     overflow-y: hidden;
+    background: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(0,0,0,1) 50%);
   }
 
   body.fontLoaded {

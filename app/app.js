@@ -27,7 +27,7 @@ import LanguageProvider from 'containers/LanguageProvider';
 //import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=[name].[ext]!./.htaccess';
 
-import '!file-loader?name=[name].[ext]!./images/wolf.jpg';
+import '!file-loader?name=[name].[ext]!./images/wolf-min.png';
 
 /* eslint-enable import/no-unresolved, import/extensions */
 
