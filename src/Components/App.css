@@ -1,0 +1,8 @@
+body, html {
+  height: 100%;
+  weight: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #49bece 0%,rgba(0,0,0,1) 50%);
+}
