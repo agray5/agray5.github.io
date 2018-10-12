@@ -4,5 +4,10 @@ body, html {
 }
 
 body {
-  background: linear-gradient(to right, #49bece 0%,rgba(0,0,0,1) 50%);
+  
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
