@@ -2,6 +2,7 @@
 //React implementation: April Gray
 
 import React, { Component } from 'react'
+import chroma from 'chroma-js'
 
 class Constellations extends React.Component {
 
@@ -163,7 +164,7 @@ const constellations = (canvas) => {
             var alpha = 1 - this.depth;
             context.beginPath();
             context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
-            context.fillStyle = 'rgba(255,255,255,' + alpha + ')';
+            context.fillStyle = `rgba(255, 255, 255,${alpha})`;
             context.fill();
         }
     }
@@ -206,4 +207,11 @@ const constellations = (canvas) => {
     }
 
     requestAnimationFrame(animate);
+}
+
+function randColor(startHex, endHex, colorNums=20){
+    let colors = chroma.scale([startHex, endHex]).mode('lch').colors(colorNums)
+    let color  = colors[Math.floor((Math.random() * 10))]
+    return `${color[0]},${color[1]},${color[2]}`
+
 }
