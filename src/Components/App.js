@@ -4,22 +4,36 @@ import './App.css';
 
 //Depends
 import styled from 'styled-components';
-import { invert } from 'invert-color';
 
 //Components
 import SideBar from './SideBar';
+import Title from './Title'
+import Constellations from './Constellations'
 
 //Assets 
 import wolf from '../Img/wolf.png';
-import {Colors} from '../palette'
+import {Colors} from '../theme'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {height: 0, width: 0};
+  }
+
+  componentDidMount() {
+    const height = document.getElementById('root').clientHeight;
+    const width = document.getElementById('root').clientWidth;
+    this.setState({ height, width });
+  }
+
   render() {
+    console.log(this.state.height, this.state.width)
     return (
       <Root id="container">
         <SideBar />
+        <Title/>
         <StyledImg src={wolf} />
-        <Title>April Gray</Title>
+        <StyledConstellations width={window.innerWidth/2} height={window.innerHeight}/>
         {/*<Divider></Divider>*/}
       </Root>
     );
@@ -34,13 +48,12 @@ const Root = styled.div`
   background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);
 `;
 
-const Title = styled.h1`
+
+const StyledConstellations = styled(Constellations)`
   position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: translate(-25%, -25%);
-  color: ${invert('#282b35') };
-`;
+  right: 0;
+  top: 0;
+`
 
 const Divider = styled.div`
   width: 20px;
@@ -57,6 +70,7 @@ const StyledImg = styled.img`
   position: absolute;
   right: 0px;
   bottom: 0px;
+  z-index: 1;
 `;
 
 
