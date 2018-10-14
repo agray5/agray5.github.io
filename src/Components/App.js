@@ -71,6 +71,7 @@ const StyledImg = styled.img`
   right: 0px;
   bottom: 0px;
   z-index: 1;
+  transform: scaleX(-1);
 `;
 
 

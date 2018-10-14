@@ -90,12 +90,15 @@ const constellations = (canvas) => {
         }
 
         draw() {
-            context.fillStyle = "#030303";
+            context.fillStyle = "rgba(0,0,0,1)";
+            //context.fillStyle = "#030303";
             context.fillRect(0, 0, canvas.width, canvas.height);
+           
             
             for (var i = 0; i < this.length; i++) {
                 this.nodes[i].draw();
             }
+        
 
         }
 
