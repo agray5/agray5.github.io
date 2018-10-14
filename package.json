@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "chroma-js": "^1.4.0",
+    "eq.js": "^1.9.0",
     "invert-color": "^1.5.0",
     "konva": "^2.4.2",
     "lodash.has": "^4.5.2",
@@ -15,7 +16,9 @@
     "react": "^16.5.2",
     "react-canvas-component": "^0.1.5",
     "react-dom": "^16.5.2",
+    "react-element-query": "^3.0.3",
     "react-konva": "^16.5.2",
+    "react-responsive": "^5.0.0",
     "react-scripts": "2.0.4",
     "rebass": "^3.0.0-9",
     "styled-components": "^3.4.10"

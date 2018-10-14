@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import SideBar from './SideBar';
 import Title from './Title'
 import Constellations from './Constellations'
+import {media, mediaMax} from '../Utils/MediaQueries'
 
 //Assets 
 import wolf from '../Img/wolf.png';
@@ -45,33 +46,29 @@ const Root = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);
+  background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
+
+  ${media.desktop`background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);`}
 `;
 
-
 const StyledConstellations = styled(Constellations)`
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
+
+  ${media.desktop`display: block;`}
 `
 
-const Divider = styled.div`
-  width: 20px;
-  height: 100%;
-  background: rgba(${Colors.secondary}, 0.9);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 const StyledImg = styled.img`
-  width: 50%;
   position: absolute;
   right: 0px;
   bottom: 0px;
   z-index: 1;
   transform: scaleX(-1);
+
+  ${media.desktop`width: 50%;`}
+  ${mediaMax.desktop`height: 50%;`}
 `;
 
 

@@ -162,6 +162,9 @@ const constellations = (canvas) => {
 
         draw() {
             var alpha = 1 - this.depth;
+            if(this.x < 100){
+                alpha = this.x/10 * 0.05
+            }
             context.beginPath();
             context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
             context.fillStyle = `rgba(255, 255, 255,${alpha})`;
