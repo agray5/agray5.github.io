@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import { withStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { slide as Menu } from "react-burger-menu";
 
-class SideBar extends React.Component{
+import './SideBar.css';
+
+import styled from 'styled-components';
+
+class SideBar extends Component{
+    state = {
+        isOpen: true,
+    };
+    
+    handleStateChange (state) {
+        this.setState({isOpen: state.isOpen})  
+      }
+
     render(){
         return(
-        <StyledBar position="static" color="default">
-            <Toolbar>
-                <IconButton color="inherit" aria-label="Menu">
-                    <MenuIcon />
-                </IconButton>
-            </Toolbar>
-        </StyledBar>
+            <Menu 
+                className="sideBar"
+                {...this.props} 
+                onStateChange={(state) => this.handleStateChange(state)} 
+                isOpen={this.state.isOpen}
+                noOverlay
+                width={ 100 }
+            >
+            <a id="home" className="menu-item" href="/">Home</a>
+            <a id="about" className="menu-item" href="/about">About</a>
+            <a id="contact" className="menu-item" href="/contact">Contact</a>
+            <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+          </Menu>
         )
     }
 }
 
 export default SideBar
 
-let StyledBar = withStyles({
-    root: {
-      boxShadow: 'none',
-      background: 'none'
-    }
-  })(AppBar);
-  
+
