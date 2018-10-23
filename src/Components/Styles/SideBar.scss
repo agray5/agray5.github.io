@@ -1,0 +1,97 @@
+@import '_varibles';
+  $cross-width: 36px;
+  $cross-height: 30px;
+
+  .bm-cross-button {
+    width: $cross-width !important;
+    height: $cross-height !important;
+    top: $cross-width !important;
+    left: $cross-width !important;
+
+    & > span:first-child {
+      right: $cross-width !important;
+    }
+
+    & .bm-cross {
+      background: $primary;
+      margin-bottom: 200px;
+      display: block;
+      width: $cross-width !important;
+    }
+
+    &:hover {
+      & .bm-cross {
+        background: $accent;
+      }
+    }
+
+  }
+  
+  .bm-burger-button {
+    position: fixed;
+    width: $cross-width;
+    height: $cross-height;
+    left: $cross-width;
+    top: $cross-width;
+  }
+  .right .bm-burger-button {
+    left: initial;
+    right: 36px;
+  }
+  .bm-burger-bars {
+    background: $secondary;
+  }
+  .bm-morph-shape {
+    fill: $secondary;
+  }
+  .bm-menu {
+    background: $secondary;
+
+    & > nav:first-child {
+      margin-top: $cross-width+50px;
+      height: auto !important;
+    }
+
+    & .bm-item{
+      color: $primary;
+    }
+
+    & a {
+      text-decoration: none;
+
+      &:hover, &:focus{
+        color: /*#c94e50*/ $accent;
+      }
+    }
+
+    & .bm-item-list {
+
+      & a{
+        padding: 0.8em;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+ 
+  .sideBar {
+    @media screen and (min-width: $break-small){
+      & .bm-item-list {
+        top: 50%;
+      transform: translateY(50%);
+      }
+    }
+
+    @media screen and (max-width: $break-small){
+
+      & .bm-burger-button {
+        width: $cross-width/2;
+        height: $cross-height/2;
+      }
+
+      & + div {
+        position: relative;
+        height: $cross-width + 50px;
+      }
+    }
+  }

@@ -28,7 +28,7 @@ export const Query_Computer = (props) => {
 
 
 
-const sizes = {
+export const sizes = {
   giant: 1170,
   desktop: 992,
   tablet: 768,

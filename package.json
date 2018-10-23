@@ -11,6 +11,7 @@
     "lodash.hasin": "^4.5.2",
     "lodash.isarray": "^4.0.0",
     "lodash.isobject": "^3.0.2",
+    "node-sass": "^4.9.4",
     "react": "^16.5.2",
     "react-burger-menu": "^2.5.4",
     "react-canvas-component": "^0.1.5",

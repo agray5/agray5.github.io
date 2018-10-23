@@ -20,9 +20,8 @@ class Title extends React.Component{
 export default Title
 
 const StyledFlex = styled(Flex)`
-    margin-top: 20%;
     margin-top: 5%;
-    ${media.desktop`width: 50%;`} 
+    ${media.desktop`width: 50%;transform: translatey(50%);`} 
     ${mediaHeight.phone`margin-top: 20%;`}
     ${mediaHeight.desktop`margin-top: 5%;`}
     
