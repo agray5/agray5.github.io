@@ -9,9 +9,10 @@ class Title extends React.Component{
     render(){
         return(
             <StyledFlex flexDirection="column">
-                <MainTitle>April Gray</MainTitle>
-                <SubTitle>Mobile/Web/Software</SubTitle>
-                <SubTitle>Developer</SubTitle>
+                <MainTitle>{this.props.title}</MainTitle>
+                {this.props.subtitles.map((item, index) => (
+                    <SubTitle key={index}> {item} </SubTitle>
+                ))}
             </StyledFlex>
         )
     }
