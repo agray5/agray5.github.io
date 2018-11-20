@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { slide as Menu } from "react-burger-menu";
-import { sizes } from "../Utils/MediaQueries"
+import { sizes } from "../utils/mediaQueries"
 
-import './Styles/SideBar.scss';
+import '../styles/header.scss';
 
 
-class SideBar extends Component{
+class Header extends Component{
     state = {
         isOpen: window.innerWidth>sizes.phone,
     };
@@ -34,6 +34,4 @@ class SideBar extends Component{
 }
 
 
-export default SideBar
-
-
+export default Header

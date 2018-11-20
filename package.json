@@ -1,42 +1,43 @@
 {
-  "name": "website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "chroma-js": "^1.4.0",
-    "eq.js": "^1.9.0",
-    "invert-color": "^1.5.0",
-    "konva": "^2.4.2",
-    "lodash.has": "^4.5.2",
-    "lodash.hasin": "^4.5.2",
-    "lodash.isarray": "^4.0.0",
-    "lodash.isobject": "^3.0.2",
-    "node-sass": "^4.9.4",
-    "react": "^16.5.2",
+    "gatsby": "^2.0.19",
+    "gatsby-image": "^2.0.15",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.4",
+    "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-source-filesystem": "^2.0.4",
+    "gatsby-transformer-sharp": "^2.1.4",
+    "node-sass": "^4.10.0",
+    "react": "^16.5.1",
     "react-burger-menu": "^2.5.4",
-    "react-canvas-component": "^0.1.5",
-    "react-dom": "^16.5.2",
-    "react-element-query": "^3.0.3",
-    "react-konva": "^16.5.2",
-    "react-responsive": "^5.0.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "rebass": "^3.0.0-9",
-    "styled-components": "^3.4.10"
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "rebass": "^3.0.0-11",
+    "styled-components": "^4.1.1"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "prettier": "^1.14.2"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
 }

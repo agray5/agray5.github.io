@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Flex } from 'rebass'
 import styled from 'styled-components';
-import {media, mediaHeight} from '../Utils/MediaQueries'
+import {media, mediaHeight} from '../utils/mediaQueries'
 import chroma from 'chroma-js'
 
 

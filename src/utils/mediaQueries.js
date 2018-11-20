@@ -1,32 +1,4 @@
-import React, { Component } from 'react';
-import MediaQuery from 'react-responsive';
 import { css } from 'styled-components'
-
-export const Query_Phone = (props) => {
-    return (
-        <MediaQuery maxDeviceWidth={400}>
-            {props.children}
-        </MediaQuery>
-    )
-}
-
-export const Query_Tablet = (props) => {
-    return (
-        <MediaQuery maxDeviceWidth={1224}>
-            {props.children}
-        </MediaQuery>
-    )
-}
-
-export const Query_Computer = (props) => {
-    return (
-        <MediaQuery minDeviceWidth={1224}>
-            {props.children}
-        </MediaQuery>
-    )
-}
-
-
 
 export const sizes = {
   giant: 1170,
