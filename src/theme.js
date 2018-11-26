@@ -3,7 +3,8 @@ export const  Colors = {
     secondary: '#727675',
     accent: '#c2496a',
     primary_dark: '#2e6171',
-    primary_light: '#556f7a'
+    primary_light: '#556f7a',
+    menu: "#232a2f",
 }
 
 // example theme.js
@@ -13,11 +14,7 @@ export default {
         0.75, 1, 2, 3, 4, 5, 6
     ],
     colors: {
-        primary: '#49bece',
-        secondary: '#727675',
-        accent: '#c2496a',
-        primary_dark: '#2e6171',
-        primary_light: '#556f7a'
+        ...Colors
     },
     space: [
       0, 4, 8, 16, 32, 64, 128, 256

@@ -27,19 +27,12 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Hi, I\'m April Gray. I build applications for web, mobile, and desktop use.' },
           ]}
         >
+          {/** Fonts */}
+          <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Sacramento" rel="stylesheet" />
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
           {children}
-        </div>
       </>
     )}
   />

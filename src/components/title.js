@@ -6,12 +6,14 @@ import chroma from 'chroma-js'
 
 
 class Title extends React.Component{
+
     render(){
         return(
             <StyledFlex flexDirection="column">
-                <MainTitle>{this.props.title}</MainTitle>
-                {this.props.subtitles.map((item, index) => (
-                    <SubTitle key={index}> {item} </SubTitle>
+                <MainTitle theme={this.props.theme}>{this.props.title}</MainTitle>
+                {this.props.subtitles &&
+                    this.props.subtitles.map((item, index) => (
+                    <SubTitle theme={this.props.theme} key={index}> {item} </SubTitle>
                 ))}
             </StyledFlex>
         )
@@ -22,7 +24,7 @@ export default Title
 
 const StyledFlex = styled(Flex)`
     margin-top: 5%;
-    ${media.desktop`width: 50%;transform: translatey(50%);`} 
+    ${media.desktop`width: 55%;transform: translatey(50%);`} 
     ${mediaHeight.phone`margin-top: 20%;`}
     ${mediaHeight.desktop`margin-top: 5%;`}
     
