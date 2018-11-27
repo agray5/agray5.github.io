@@ -4,13 +4,12 @@ import Img from "gatsby-image"
 
 //Depends
 import styled from 'styled-components';
-
 import Title from '../components/title'
+import SideImageGrad from '../components/sideImageGrad'
 
 //Assets 
 import theme, {Colors} from '../theme'
-import {media, mediaMax} from '../utils/mediaQueries'
-import Attribute from '../components/attribute'
+import {media} from '../utils/mediaQueries'
 
 const AboutPage = (props) => (
   <Layout>
@@ -28,8 +27,11 @@ const AboutPage = (props) => (
             <p> Starting in the Summer of 2018 I have done freelance work creating Android 
                 and IOS applications. </p> 
         </StyledTextContainer>
-        <StyledImg fluid={props.data.dog.childImageSharp.fluid}/>
-        <Attribute href="https://www.vecteezy.com/vector-art/139760-border-collie-silhouette-free-vector" author="www.vecteezy.com"/>
+        
+        <SideImageGrad img={props.data.dog.childImageSharp.fluid} 
+                       href="https://www.vecteezy.com/vector-art/139760-border-collie-silhouette-free-vector" 
+                       author="www.vecteezy.com"/>
+        
     </StyledDiv>
   </Layout>
 )
@@ -45,36 +47,25 @@ export const query = graphql`
             ...GatsbyImageSharpFluid_noBase64
           }
         }
-      }
+      },
   }`
 
 const StyledTextContainer = styled.div`
-  margin-top: 70px;
   margin-left: 10%;
-  width: 40%;
+  height: 80%;
+  width: 80%
+  overflow-y: auto;
   color: ${Colors.menu}
+  ${media.desktop`width: 40%; margin-top: 70px;`}
 `;
 
 const StyledDiv = styled.div`
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
+    background: linear-gradient(${Colors.primary} 0%,#c6567f 70%);
     ${media.desktop`background: linear-gradient(to right, ${Colors.primary} 0%,#c6567f);`}
 `
-
-const StyledImg = styled(Img)`
-    position: absolute !important;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
-    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0) 85%);
-
-    width: 60%;
-    height: 100%
-    ${media.desktop`width: 50%;`}
-    ${mediaMax.desktop`height: 50%;`}
-`;
-
 
 export default AboutPage

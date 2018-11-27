@@ -42,7 +42,8 @@ export const query = graphql`
   }`
 
 const Root = styled.div`
-    position: relative;
+    position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -52,10 +53,10 @@ const Root = styled.div`
 `;
 
 const StyledConstellations = styled(Constellations)`
+    display: none;
     position: absolute;
     right: 0;
     top: 0;
-    display: block;
     ${media.desktop`display: block;`}
 `
 
@@ -66,8 +67,7 @@ const StyledImg = styled(Img)`
     z-index: 1;
     transform: scaleX(-1);
 
-    width: 50%;
-    height: 50%
+    width: 100%;
     ${media.desktop`width: 50%;`}
     ${mediaMax.desktop`height: 50%;`}
 `;
