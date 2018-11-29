@@ -1,6 +1,5 @@
 import React, { Component, Children } from 'react';
 import styled from 'styled-components';
-import { Link } from '@reach/router';
 
 import {Colors} from '../theme'
 
