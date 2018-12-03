@@ -3,49 +3,132 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types'
 import Img from "gatsby-image"
 
+import { darken, rgba, saturate} from 'polished'
+import { media } from '../utils/mediaQueries'
+
 import {Colors} from '../theme'
 
-const ImageHoverDiv = (props) => (
-    <ImageContainer>
-        <StyledImg fluid={props.img} alt={`${props.title} portfolio image`}/>
-            <div className="overlay">
-                <div class="text">{props.title}</div>
-            </div>
+class ImageHoverDiv extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            isOpen: false
+        }
+
+        this.prototype = {
+            theme: PropTypes.object.isRequired,
+            img: PropTypes.object.isRequired,
+            title: PropTypes.string.isRequired,
+            desc: PropTypes.string.isRequired,
+            width: PropTypes.number,
+            height: PropTypes.number,
+            links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
+        }
+
+        this.toggleDiv = this.toggleDiv.bind(this);
+    }
+
+    toggleDiv(event){
+        this.setState({isOpen: !this.state.isOpen});
+        this.refs.overlay.style.height = this.state.isOpen?"0":"100%";
+    }
+
+    render() {
+        return(
+            <ImageContainer theme={this.props.theme} width={this.props.width} maxHeight={this.props.height} className="hoverImage" onClick={this.toggleDiv}>
+                <StyledImg fluid={this.props.img} alt={`${this.props.title} portfolio image`}/>
+                    <div className="overlay" ref="overlay">
+                        <div className="text">{this.props.title}</div>
+                            {this.props.links? 
+                                <ul className="imageHoverUL">
+                                    {this.props.links.map((link, index) => {
+                                        return <li className="imageHoverLink" key={index}>
+                                                    <a href={link[1]} target="_blank">{
+                                                        link[0]}
+                                                    </a>
+                                                </li>
+                                    })}
+                                </ul>:''}
+                    </div>
     </ImageContainer>
-)
+        )
+    }
+}
 
 export default ImageHoverDiv
 
-ImageHoverDiv.prototype = {
-    img: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
-}
+
 
 const ImageContainer = styled.div`
     position: relative;
+    ${props => props.width?`width:${props.width}`:''}
+    ${props => props.maxHeight?`max-height:${props.maxHeight}`:''}
+    color: ${props => props.theme.colors.primary};;
+    text-align: center;
+
+    & .imageHoverUL {
+        padding: 0;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        ${media.tablet`flex-direction: column;`}
+    }
+    & .imageHoverLink {
+        list-style-type: none;
+        border-style: solid;
+        background-color: ${props => props.theme.colors.menu};
+        border-color: ${props => darken(0.5, props.theme.colors.menu)};
+        border-width: 0px 0px 3px;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset; 
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out 0s;
+        font-weight: 700;	
+        padding: 8px;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 18px;
+        color: white;
+        width: 22%;
+        display: list-item;
+
+        &:hover, &:focus, &:active {
+            background: ${props => darken(0.1, props.theme.colors.menu)};
+            border-color: ${props => saturate(0.5, props.theme.colors.menu)};
+        }
+
+        & a{
+            color: ${props => props.theme.colors.primary};
+            text-decoration: none;
+        }
+
+    }
+
+    & .text {
+        margin-top: 10px;
+    }
 
     & .overlay{
         position: absolute;
-        display: none;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: ${props => rgba(props.theme.colors.menu, 0.5)};
         overflow: hidden;
         width: 100%;
         height: 0;
         transition: .5s ease;
-
     }
 
-    &:hover {
-        height: 100%;
+    &:hover .overlay{
+        height: 100% !important;
     }
 `;
 
 const StyledImg = styled(Img)`
     display: block;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
