@@ -45,6 +45,7 @@ const constellations = (canvas) => {
         timeoutID = setTimeout(init, 500);
     }, false);
 
+    setTimeout(()=>{init()}, 500);
 
     // Init
     function init() {  
