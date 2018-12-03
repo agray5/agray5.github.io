@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import ImageHoverDiv from '../components/imageHoverDiv'
 
+import Title from '../components/title'
+
 //Depends
 import styled from 'styled-components';
 import theme from '../theme'
@@ -34,16 +36,19 @@ const Portfolio = (props) => {
     const images = genImageData(portfolioImgs);
   return(
     <Layout>
-        <Container>
+        <Root theme={theme}>
+        <Title title="Portfolio" theme={{...theme, colors:{...theme.colors, primary: theme.colors.accent}}}/>
+        <Container theme={theme}>
             {portfolioImgs.map(((img, index) => {
                 return (<ImageHoverDiv 
                     {...images[index]}
                     theme={theme}
                     width="400px"
-                    height= "250px"
+                    height= "200px"
                     key={index}/>)
             }))}
         </Container>
+        </Root>
     </Layout>
   )
 }
@@ -65,18 +70,30 @@ export const query = graphql` {
     }
   }
 `
+const Root = styled.div`
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: ${props => props.theme.colors.primary};
+
+    & .titleContainer {
+        margin-top: 0;
+    }
+`;
 
 const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    align-content: flex-start;
     overflow-y: auto;
     height: 100%;
-    margin: 10px;
-    ${media.tablet`margin: 0 0 0 10%;`}
+    margin: 20px 0;
+    ${media.tablet`margin: 70px 0 0 10%;`}
 
     & .hoverImage{
-        margin: 5px;
+        margin: 5px 0;
+        ${media.tablet`margin: 5px;`}
     }
 `;
 

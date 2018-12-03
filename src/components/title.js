@@ -9,7 +9,7 @@ class Title extends React.Component{
 
     render(){
         return(
-            <StyledFlex flexDirection="column">
+            <StyledFlex flexDirection="column" className="titleContainer">
                 <MainTitle theme={this.props.theme}>{this.props.title}</MainTitle>
                 {this.props.subtitles &&
                     this.props.subtitles.map((item, index) => (
