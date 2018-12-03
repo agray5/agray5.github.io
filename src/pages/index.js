@@ -20,7 +20,7 @@ const IndexPage = (props) => (
         <Root id="container">
             <Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>
             <StyledImg fluid={props.data.wolf.childImageSharp.fluid}/>
-            <StyledConstellations width={window.innerWidth/2} height={window.innerHeight}/>
+            <StyledConstellations width={typeof window !== 'undefined' && window.innerWidth/2} height={typeof window !== 'undefined' && window.innerHeight}/>
             <Attribute href="https://unsplash.com/photos/wK_DZlAJJ_Q" author="Grégoire Bertaud" />
         </Root>
   </Layout>
