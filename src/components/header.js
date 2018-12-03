@@ -20,8 +20,12 @@ const iconHref = ["https://www.linkedin.com/in/aprgray5/", "https://github.com/a
 
 class Header extends Component{
     state = {
-        isOpen: window.innerWidth>sizes.phone,
+        isOpen: false,
     };
+
+    componentDidMount () {
+        this.state.setState({isOpen: window.innerWidth>sizes.phone})
+    }
     
     handleStateChange (state) {
         this.setState({isOpen: state.isOpen})  
