@@ -24,7 +24,7 @@ class Header extends Component{
     };
 
     componentDidMount () {
-        this.state.setState({isOpen: window.innerWidth>sizes.phone})
+        this.setState({isOpen: window.innerWidth>sizes.phone})
     }
     
     handleStateChange (state) {
