@@ -11,7 +11,6 @@ import {github} from 'react-icons-kit/fa/github';
 import {linkedin} from 'react-icons-kit/fa/linkedin';
 import Icon from 'react-icons-kit';
 
-import { ShareButtonRectangle, ShareBlockStandard } from "react-custom-share";
 import styled from 'styled-components'
 import theme from '../theme'
   
