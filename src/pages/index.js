@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 //Depends
 import styled from 'styled-components';
 import Img from "gatsby-image"
+import withSizes from 'react-sizes'
 
 //Components
 import Layout from '../components/layout'
@@ -15,12 +16,17 @@ import {media, mediaMax} from '../utils/mediaQueries'
 import theme, {Colors} from '../theme'
 import Attribute from '../components/attribute';
 
+const mapSizesToProps = ({width, height}) => ({
+    width: width?width:800,
+  height: height?height:700,
+});
+
 const IndexPage = (props) => (
   <Layout>
         <Root id="container">
             <Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>
             <StyledImg fluid={props.data.wolf.childImageSharp.fluid}/>
-            <StyledConstellations width={typeof window !== 'undefined' && window.innerWidth/2} height={typeof window !== 'undefined' && window.innerHeight}/>
+            <StyledConstellations {...mapSizesToProps(withSizes)}/>
             <Attribute href="https://unsplash.com/photos/wK_DZlAJJ_Q" author="Grégoire Bertaud" />
         </Root>
   </Layout>

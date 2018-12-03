@@ -62,9 +62,9 @@ export default ImageHoverDiv
 
 const ImageContainer = styled.div`
     position: relative;
-    ${props => props.width?`width:${props.width}`:''}
-    ${props => props.maxHeight?`max-height:${props.maxHeight}`:''}
-    color: ${props => props.theme.colors.primary};;
+    ${props => props.width?`width:${props.width}`:''};
+    ${props => props.maxHeight?`max-height:${props.maxHeight}`:''};
+    color: ${props => props.theme.colors.primary};
     text-align: center;
 
     & .imageHoverUL {

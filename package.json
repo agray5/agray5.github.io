@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "April_Portfolio_Website",
+  "description": "Portfolio Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "April Gray <aprgray5@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.9.2",
     "chroma-js": "^1.4.0",
@@ -26,6 +26,7 @@
     "react-icons": "^3.2.2",
     "react-icons-kit": "^1.2.1",
     "react-responsive": "^6.0.1",
+    "react-sizes": "^1.0.4",
     "rebass": "^3.0.0-11",
     "styled-components": "^4.1.2"
   },
@@ -37,6 +38,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "serve": "gatsby build && gatsby serve",
+    "server": "npm run serve",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

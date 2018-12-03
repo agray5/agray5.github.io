@@ -56,7 +56,7 @@ const StyledTextContainer = styled.div`
   height: 80%;
   width: 80%
   overflow-y: auto;
-  color: ${Colors.menu}
+  color: ${Colors.menu};
   ${media.desktop`width: 40%; margin-top: 70px;`}
 `;
 

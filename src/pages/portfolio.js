@@ -75,6 +75,7 @@ const Root = styled.div`
     top: 0;
     height: 100%;
     background: ${props => props.theme.colors.primary};
+    width: 100%;
 
     & .titleContainer {
         margin-top: 0;
