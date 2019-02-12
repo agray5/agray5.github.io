@@ -13,7 +13,7 @@ const titles = ['Prompt Generator', 'Weather App', 'Calender', 'Processing Tic-T
                 'Random 2D Map', 'Mock Airplane Reservation Server'];
 const links = [[['Live', 'https://agray5.github.io/PromptGenerator/'], ['Github', 'https://github.com/agray5/PromptGenerator']],
                [['Live', 'https://agray5.github.io/Weather-Widget/'], ['Github', 'https://github.com/agray5/Weather-Widget']],
-               [['Live', 'https://agray5.github.io/Calender/'], ['Github', 'https://github.com/agray5/Calender']],
+               [['Live', 'https://agray5.github.io/calender/'], ['Github', 'https://github.com/agray5/Calender']],
                [['Github', 'https://github.com/agray5/ProcessingTicTacToe']],
                [['Github', 'https://github.com/agray5/Random-Tilemap-In-Godot']],
                [['Download', 'https://agray5.github.io/downloads/Multiprocessing%20Server.zip']]
