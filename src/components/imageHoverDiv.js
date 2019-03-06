@@ -43,11 +43,11 @@ class ImageHoverDiv extends React.Component {
                             {this.props.links? 
                                 <ul className="imageHoverUL">
                                     {this.props.links.map((link, index) => {
-                                        return <li className="imageHoverLink" key={index}>
-                                                    <a href={link[1]} target="_blank">{
-                                                        link[0]}
-                                                    </a>
-                                                </li>
+                                        return <a href={link[1]} target="_blank" className="imageHoverLink">
+                                                    <li key={index}>
+                                                        {link[0]}
+                                                    </li>
+                                                </a>
                                     })}
                                 </ul>:''}
                     </div>
@@ -75,6 +75,7 @@ const ImageContainer = styled.div`
         ${media.tablet`flex-direction: column;`}
     }
     & .imageHoverLink {
+        text-decoration: none;
         list-style-type: none;
         border-style: solid;
         background-color: ${props => props.theme.colors.menu};
