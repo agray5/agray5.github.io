@@ -4,13 +4,16 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 import Img from "gatsby-image"
 import withSizes from 'react-sizes'
+import Container from '@material-ui/core/Container';
+import Typography from '../styles/Typography';
+import Box from '@material-ui/core/Box'
 
 //Components
-import Layout from '../components/layout'
 
 import Title from '../components/title'
 import Constellations from '../components/constellations'
 import {media, mediaMax} from '../utils/mediaQueries'
+import withWidth from '@material-ui/core/withWidth';
 
 //Assets 
 import theme, {Colors} from '../theme'
@@ -21,18 +24,30 @@ const mapSizesToProps = ({width, height}) => ({
   height: height?height:700,
 });
 
-const IndexPage = (props) => (
-  <Layout>
+const IndexPage = ({theme, data, width}) => (
+  <Container>
+    {console.log("dem Theme", theme)}
         <Root id="container">
+          <HalfBox display="flex" flexDirection="column" justifyContent={width==='lg'?"center":"start"}>
+            <Typography variant="h1" align='center'>
+              April Gray
+            </Typography>
+            <Typography variant="subtitle1" component='h1' align='center'>
+              Mobile/Web/Software
+            </Typography>
+            <Typography variant="subtitle1" component='h1' align='center'>
+              Developer
+            </Typography>
+          </HalfBox>
             <Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>
-            <StyledImg fluid={props.data.wolf.childImageSharp.fluid}/>
+            <StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
             <Attribute href="https://unsplash.com/photos/wK_DZlAJJ_Q" author="Grégoire Bertaud" />
         </Root>
-  </Layout>
+  </Container>
 )
 
-export default IndexPage
+export default withWidth()(IndexPage)
 
 export const query = graphql`
   query {
@@ -46,6 +61,16 @@ export const query = graphql`
         }
       }
   }`
+
+const HalfBox = styled(Box)`
+  width: 50%;
+  height: 100%;
+
+  ${theme.breakpoints.down('md')} {
+    width: 100%;
+    margin-top: 15%;
+  }
+`
 
 const Root = styled.div`
     position: absolute;
@@ -72,6 +97,7 @@ const StyledImg = styled(Img)`
     bottom: 0px;
     z-index: 1;
     transform: scaleX(-1);
+    overflow: visible !important;
 
     width: 100%;
     ${media.desktop`width: 50%;`}

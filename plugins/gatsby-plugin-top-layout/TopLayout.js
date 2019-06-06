@@ -1,15 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import theme from '../../src/theme';
+import Header from '../../src/components/header';
 
-import Header from './header'
-import theme from '../theme'
-import './layout.css'
-
-const Layout = ({ children }) => (
+const TopLayout = ({ children }) => (
       <>
         <Helmet
           meta={[
@@ -22,17 +19,16 @@ const Layout = ({ children }) => (
           <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Sacramento" rel="stylesheet" />
           <html lang="en" />
         </Helmet>
-        <ThemeProvider theme={theme}>
-          <>
+        <MuiThemeProvider theme={theme}>
           <CssBaseline />
+          <Header />
           {children}
-          </>
-        </ThemeProvider>
+        </MuiThemeProvider>
       </>
 )
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+TopLayout.propTypes = {
+  children: PropTypes.node,
+};
 
-export default Layout
+export default TopLayout

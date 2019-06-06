@@ -67,11 +67,11 @@ const Social = styled.ul`
         cursor: pointer;
 
         & a {
-            color: ${props=> props.theme.colors.primary};
+            /*color: ${props=> props.theme.colors.primary};*/
         }
 
         &:hover {
-            color: ${props=> props.theme.colors.accent};
+            /*color: ${props=> props.theme.colors.accent};*/
         }
     }
 `

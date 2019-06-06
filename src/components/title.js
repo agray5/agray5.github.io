@@ -30,20 +30,20 @@ const StyledFlex = styled(Flex)`
 `;
 
 const MainTitle = styled.h1`
-  font-family: ${props => props.theme.fonts.cursive};
-  color: ${props => props.theme.colors.primary};
+  /*font-family: ${props => props.theme.fonts.cursive};*/
+  /*color: ${props => props.theme.colors.primary};*/
   text-align: center;
   z-index: 2;
 
-  ${props => media.tablet`font-size: ${props.theme.fontSizes[6]}rem;`}
+  /*${props => media.tablet`font-size: ${props.theme.fontSizes[6]}rem;`}*/
 `;
 
 const SubTitle = styled.h2`
-  font-family: ${props => props.theme.fonts.mono};
-  color: ${props => chroma(props.theme.colors.primary)};
+  /*font-family: ${props => props.theme.fonts.mono};*/
+  /*color: ${props => chroma(props.theme.colors.primary)};*/
   text-align: center;
   z-index: 2;
 
-  ${props => media.tablet`font-size: ${props.theme.fontSizes[2]}rem;`}
+  /*${props => media.tablet`font-size: ${props.theme.fontSizes[2]}rem;`}*/
 `;
 

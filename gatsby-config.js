@@ -3,6 +3,7 @@ module.exports = {
     title: 'April Gray | Portfolio | Web & Software Developer',
   },
   plugins: [
+    'gatsby-plugin-top-layout',
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
