@@ -37,7 +37,7 @@ const Portfolio = (props) => {
   return(
     <Layout>
         <Root theme={theme}>
-        <Title title="Portfolio" theme={{...theme, colors:{...theme.colors, primary: theme.colors.accent}}}/>
+        <Title title="Portfolio" theme={{...theme}}/>
         <Container theme={theme}>
             {portfolioImgs.map(((img, index) => {
                 return (<ImageHoverDiv 
@@ -74,7 +74,7 @@ const Root = styled.div`
     position: absolute;
     top: 0;
     height: 100%;
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.palette.primary.main};
     width: 100%;
 
     & .titleContainer {

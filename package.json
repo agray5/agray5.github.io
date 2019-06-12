@@ -5,6 +5,8 @@
   "author": "April Gray <aprgray5@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.0.2",
+    "@material-ui/icons": "^4.0.1",
+    "animejs": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "chroma-js": "^1.4.1",
     "gatsby": "^2.8.2",
@@ -23,6 +25,7 @@
     "polished": "^2.3.3",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
+    "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",

@@ -64,7 +64,7 @@ const ImageContainer = styled.div`
     position: relative;
     ${props => props.width?`width:${props.width}`:''};
     ${props => props.maxHeight?`max-height:${props.maxHeight}`:''};
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.palette.primary.main};
     text-align: center;
 
     & .imageHoverUL {
@@ -78,8 +78,8 @@ const ImageContainer = styled.div`
         text-decoration: none;
         list-style-type: none;
         border-style: solid;
-        background-color: ${props => props.theme.colors.menu};
-        border-color: ${props => darken(0.5, props.theme.colors.menu)};
+        background-color: ${props => props.theme.palette.secondary.main};
+        border-color: ${props => darken(0.5, props.theme.palette.secondary.main)};
         border-width: 0px 0px 3px;
         box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset; 
         border-radius: 6px;
@@ -95,12 +95,12 @@ const ImageContainer = styled.div`
         display: list-item;
 
         &:hover, &:focus, &:active {
-            background: ${props => darken(0.1, props.theme.colors.menu)};
-            border-color: ${props => saturate(0.5, props.theme.colors.menu)};
+            background: ${props => darken(0.1, props.theme.palette.secondary.main)};
+            border-color: ${props => saturate(0.5, props.theme.palette.secondary.main)};
         }
 
         & a{
-            color: ${props => props.theme.colors.primary};
+            color: ${props => props.theme.palette.primary.main};
             text-decoration: none;
         }
 
@@ -115,7 +115,7 @@ const ImageContainer = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: ${props => rgba(props.theme.colors.menu, 0.5)};
+        background-color: ${props => rgba(props.theme.palette.secondary.main, 0.5)};
         overflow: hidden;
         width: 100%;
         height: 0;

@@ -1,7 +1,7 @@
 import React, { Component, Children } from 'react';
 import styled from 'styled-components';
 
-import {Colors} from '../theme'
+import theme from '../theme'
 
 class Attribute extends React.Component{
 
@@ -19,9 +19,11 @@ const StyledA = styled.a`
     position: absolute;
     right: 10px;
     bottom: 10px;
+
+    ${props => console.log("Theme", props.theme)}
     
-    background-color: ${Colors.menu}
-    color: ${Colors.primary};
+    background-color: ${theme.palette.background.main};
+    color: ${theme.palette.primary.main};
     text-decoration:none;
     padding:4px 6px;
     font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 

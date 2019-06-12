@@ -6,13 +6,12 @@ import Img from "gatsby-image"
 import withSizes from 'react-sizes'
 import Container from '@material-ui/core/Container';
 import Typography from '../styles/Typography';
+import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 
 //Components
 
-import Title from '../components/title'
 import Constellations from '../components/constellations'
-import {media, mediaMax} from '../utils/mediaQueries'
 import withWidth from '@material-ui/core/withWidth';
 
 //Assets 
@@ -25,9 +24,9 @@ const mapSizesToProps = ({width, height}) => ({
 });
 
 const IndexPage = ({theme, data, width}) => (
-  <Container>
-    {console.log("dem Theme", theme)}
-        <Root id="container">
+  <Root maxWidth={false}>
+    <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
           <HalfBox display="flex" flexDirection="column" justifyContent={width==='lg'?"center":"start"}>
             <Typography variant="h1" align='center'>
               April Gray
@@ -39,12 +38,15 @@ const IndexPage = ({theme, data, width}) => (
               Developer
             </Typography>
           </HalfBox>
-            <Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>
+        </Grid>
+          <Grid item xs={12} md={6}>
+            {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
             <StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
             <Attribute href="https://unsplash.com/photos/wK_DZlAJJ_Q" author="Grégoire Bertaud" />
-        </Root>
-  </Container>
+          </Grid>
+    </Grid>
+  </Root>
 )
 
 export default withWidth()(IndexPage)
@@ -63,16 +65,14 @@ export const query = graphql`
   }`
 
 const HalfBox = styled(Box)`
-  width: 50%;
   height: 100%;
 
   ${theme.breakpoints.down('md')} {
-    width: 100%;
     margin-top: 15%;
   }
 `
 
-const Root = styled.div`
+const Root = styled(Container)`
     position: absolute;
     top: 0;
     height: 100%;
@@ -80,15 +80,21 @@ const Root = styled.div`
     overflow: hidden;
     background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
 
-    ${media.desktop`background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);`}
+    ${theme.breakpoints.up('md')} {
+      background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);
+    }
+    /*media.desktop background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);*/
 `;
 
 const StyledConstellations = styled(Constellations)`
     display: none;
-    position: absolute;
     right: 0;
     top: 0;
-    ${media.desktop`display: block;`}
+
+    ${theme.breakpoints.up('md')} {
+      display: block;
+    }
+    
 `
 
 const StyledImg = styled(Img)`
@@ -100,6 +106,9 @@ const StyledImg = styled(Img)`
     overflow: visible !important;
 
     width: 100%;
-    ${media.desktop`width: 50%;`}
-    ${mediaMax.desktop`height: 50%;`}
+
+    ${theme.breakpoints.up('md')} {
+      width: 50%;
+      height: 50%;
+    }
 `;
