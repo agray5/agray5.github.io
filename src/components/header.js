@@ -2,25 +2,39 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import { isMobile, MobileView} from "react-device-detect";
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Divider from '@material-ui/core/Divider';
 
 import '../styles/header.scss';
 
 // import icons
 import MenuIcon from '@material-ui/icons/Menu';
-import Icon from 'react-icons-kit';
 import {twitter}  from 'react-icons-kit/fa/twitter';
 import {envelope} from 'react-icons-kit/fa/envelope';
 import {github} from 'react-icons-kit/fa/github';
 import {linkedin} from 'react-icons-kit/fa/linkedin';
+import {home} from 'react-icons-kit/fa/home';
+import {addressCard} from 'react-icons-kit/fa/addressCard';
+import {briefcase} from 'react-icons-kit/fa/briefcase';
+import {commenting} from 'react-icons-kit/fa/commenting'
 
 import styled from 'styled-components';
 import Drawer from '../styles/drawer';
+import LinkList from './linkList'
 
-const links = [""]
+const links = [
+    {icon: home, name: "Home", url: "/"},
+    {icon: addressCard, name: "About", url: "/about"},
+    {icon: briefcase, name: "Portfolio", url: "/portfolio"},
+    {icon: commenting, name: "Contact", url: "/contact"}
+];
+
+const social = [
+    {icon: linkedin, name: "Linkedin", url: "https://www.linkedin.com/in/aprgray5/"},
+    {icon: github, name: "Github", url: "https://github.com/agray5"},
+    {icon: twitter, name: "Twitter", url: "https://twitter.com/aprgray5"},
+    {icon: envelope, name: "Email", url: "mailto:aprgray5@gmail.com"}
+]
+
 const icons = [linkedin, github, twitter, envelope]
 const iconHref = ["https://www.linkedin.com/in/aprgray5/", "https://github.com/agray5", "https://twitter.com/aprgray5", "mailto:aprgray5@gmail.com"]
 
@@ -61,6 +75,7 @@ class Header extends Component{
     }
 
     render(){
+        console.log("isMobile", isMobile, this.state.mode, this.state.mode !== modes.closed)
         return(
             <>
                 <MobileView>
@@ -87,14 +102,9 @@ class Header extends Component{
                     variant="permanent"
                     withClickAway={this.state.mode === modes.open}
                 >
-                    <List>
-                        <Divider />
-                        {icons.map((icon, index) => (
-                            <ListItem button key={index}>
-                                <ListItemIcon><Icon icon={icon} size={24}/></ListItemIcon>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <LinkList links={links} />
+                    <Divider />
+                    <LinkList links={social} />
                 </Drawer>
                 </nav>
             </>
