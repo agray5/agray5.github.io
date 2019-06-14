@@ -8,15 +8,19 @@ import Link  from "./link";
 
 
 /** Only Supports react icons kit Icons */
-const LinkList = ({links, className = "nav-link", size = 28}) => (
+const LinkList = ({links, className = "nav-link", size = 28, onClick}) => (
   <List>
     {
-      links.map(({icon, name, url}, index) => (
-        <ListItem button key={index} className={className} component={Link} to={url}>
-          {icon && <ListItemIcon><Icon icon={icon} size={size}/></ListItemIcon>}
-          {name && <ListItemText primary={name} />}
-        </ListItem>
-    ))}
+      links.filter(link => link.type !== "config")
+           .map(({icon, name, url, type}, index) => {
+              return (
+                <ListItem button key={index} className={className} component={Link} to={url} onClick={onClick}>
+                  {icon && <ListItemIcon><Icon icon={icon} size={size}/></ListItemIcon>}
+                  {name && <ListItemText primary={name} />}
+                </ListItem>
+              )
+            })
+    }
   </List>
 )
 

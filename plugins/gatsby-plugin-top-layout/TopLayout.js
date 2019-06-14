@@ -6,6 +6,8 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import theme from '../../src/theme';
 import Header from '../../src/components/header';
 
+import { links } from '../../config.js';
+
 const TopLayout = ({ children }) => (
       <>
         <Helmet
@@ -20,8 +22,9 @@ const TopLayout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <MuiThemeProvider theme={theme}>
+          {console.log("links", links)}
           <CssBaseline />
-          <Header />
+          <Header links={links}/>
           {children}
         </MuiThemeProvider>
       </>
