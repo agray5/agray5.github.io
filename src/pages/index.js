@@ -19,6 +19,7 @@ import withWidth from '@material-ui/core/withWidth';
 import theme, {Colors} from '../theme'
 import Attribute from '../components/attribute';
 import { transparentize } from 'polished';
+import LetterRain from '../components/letterRain';
 
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
@@ -42,6 +43,7 @@ const IndexPage = ({theme, data, width}) => (
           </HalfBox>
         </Grid>
           <Grid item xs={12} md={6}>
+            <LetterRain />
             {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
             {/*<StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
