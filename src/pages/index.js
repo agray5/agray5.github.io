@@ -8,6 +8,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '../styles/Typography';
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
+import background from "../images/night.jpg"
 
 //Components
 
@@ -17,6 +18,7 @@ import withWidth from '@material-ui/core/withWidth';
 //Assets 
 import theme, {Colors} from '../theme'
 import Attribute from '../components/attribute';
+import { transparentize } from 'polished';
 
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
@@ -41,10 +43,11 @@ const IndexPage = ({theme, data, width}) => (
         </Grid>
           <Grid item xs={12} md={6}>
             {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
-            <StyledImg fluid={data.wolf.childImageSharp.fluid}/>
+            {/*<StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
             <Attribute href="https://unsplash.com/photos/wK_DZlAJJ_Q" author="Grégoire Bertaud" />
-          </Grid>
+          */}
+            </Grid>
     </Grid>
   </Root>
 )
@@ -61,11 +64,21 @@ export const query = graphql`
             ...GatsbyImageSharpFluid_noBase64
           }
         }
+      }, 
+      night: file(relativePath: { eq: "night.jpg" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
       }
   }`
 
 const HalfBox = styled(Box)`
   height: 100%;
+  margin-top: 5%;
 
   ${theme.breakpoints.down('md')} {
     margin-top: 15%;
@@ -81,7 +94,10 @@ const Root = styled(Container)`
     background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
 
     ${theme.breakpoints.up('md')} {
-      background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);
+      background: linear-gradient(to right, ${Colors.primary} 0%,${Colors.grad} 70%, #000 100%);
+      background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ), 
+        url(${background}) no-repeat center center fixed;
+      background-size: cover;
     }
     /*media.desktop background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);*/
 `;

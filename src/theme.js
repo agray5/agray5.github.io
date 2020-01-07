@@ -54,6 +54,7 @@ export const  Colors = {
     primary_dark: '#2e6171',
     primary_light: '#556f7a',
     menu: "#232a2f",
+    grad: 'rgba(30,33,48,1)'
 }
 
 // example theme.js
