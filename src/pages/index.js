@@ -9,6 +9,7 @@ import Typography from '../styles/Typography';
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import background from "../images/night.jpg"
+import WordCloud from "../images/wordcloud.svg"
 
 //Components
 
@@ -20,6 +21,7 @@ import theme, {Colors} from '../theme'
 import Attribute from '../components/attribute';
 import { transparentize } from 'polished';
 import LetterRain from '../components/letterRain';
+import LineDrawing from '../components/lineDrawing';
 
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
@@ -43,7 +45,7 @@ const IndexPage = ({theme, data, width}) => (
           </HalfBox>
         </Grid>
           <Grid item xs={12} md={6}>
-            <LetterRain />
+            <LineDrawing svg={WordCloudStyled}/>
             {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
             {/*<StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
@@ -103,6 +105,19 @@ const Root = styled(Container)`
     }
     /*media.desktop background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);*/
 `;
+
+const WordCloudStyled = styled(WordCloud)`
+  user-select: none; 
+    &  text {
+      fill: none;
+      //stroke: #51256f;
+      stroke-width: 1px;
+      stroke-dashoffset: -900;
+      stroke-dasharray: 900;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+    }
+`
 
 const StyledConstellations = styled(Constellations)`
     display: none;
