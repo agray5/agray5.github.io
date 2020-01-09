@@ -81,8 +81,10 @@ export const query = graphql`
   }`
 
 const HalfBox = styled(Box)`
+  position: absolute;
   height: 100%;
-  margin-top: 5%;
+  top: 15%;
+  left: 15%;
 
   ${theme.breakpoints.down('md')} {
     margin-top: 15%;
@@ -95,26 +97,36 @@ const Root = styled(Container)`
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
+    //background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ), 
+        url(${background}) no-repeat center center fixed;
+    background-size: cover;
 
     ${theme.breakpoints.up('md')} {
-      background: linear-gradient(to right, ${Colors.primary} 0%,${Colors.grad} 70%, #000 100%);
-      background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ), 
-        url(${background}) no-repeat center center fixed;
+      //background: linear-gradient(to right, ${Colors.primary} 0%,${Colors.grad} 70%, #000 100%);
       background-size: cover;
     }
     /*media.desktop background: linear-gradient(to right, ${Colors.primary} 0%,rgba(0,0,0,1) 50%);*/
 `;
 
 const WordCloudStyled = styled(WordCloud)`
-  user-select: none; 
+  user-select: none;
+  position: absolute; 
+  bottom: 0;
+  right: 5%;
+  margin-left: 15%;
+
+  ${theme.breakpoints.down('sm')} {
+    display: none;
+  }
+  
     &  text {
       fill: none;
       //stroke: #51256f;
-      stroke-width: 1px;
-      stroke-dashoffset: -900;
-      stroke-dasharray: 900;
-      stroke-linecap: butt;
+      stroke-width: 0.5px;
+      stroke-dashoffset: -1000;
+      stroke-dasharray: 1000;
+      //stroke-linecap: butt;
       stroke-linejoin: round;
     }
 `

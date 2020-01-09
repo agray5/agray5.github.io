@@ -13,8 +13,8 @@ class LineDrawing extends React.Component{
     this.anim = anime({
       targets: document.querySelectorAll("#svg text"),
       strokeDashoffset: 0,
-      easing: 'cubicBezier(.5, .05, .1, .3)',            
-      delay: function() { return anime.random(0, 500); },
+      easing: 'easeInOutExpo',            
+      delay: function() { return anime.random(0, 3000); },
       update: (anim) => {
         //document.querySelectorAll("#svg text").forEach(item => item.style.opacity = Math.round(anim.progress)/100);
       }
@@ -25,7 +25,10 @@ class LineDrawing extends React.Component{
       const SVG = this.props.svg;
         return(
           <RootRef rootRef={this.myRef}>
+            <div>
               <SVG id="svg"/>
+            </div>
+              
             </RootRef>
         )
     }
