@@ -4,17 +4,29 @@ import styled from 'styled-components';
 import theme from '../theme'
 import { Box, Typography, RootRef } from '@material-ui/core';
 import anime from 'animejs';
+import Simple1DNoise from '../utils/noise';
 
 class LineDrawing extends React.Component{
   myRef = React.createRef();
-  update = 0;
+  
+  constructor(props) {
+    super(props);
+
+    this.rand = Simple1DNoise();
+    this.count = 0;
+
+    console.log(this.rand.getVal(3), "VALS")
+  }
 
   componentDidMount () {
+    let {delay = 0, delayMax = 3000} = this.props;
     this.anim = anime({
       targets: document.querySelectorAll("#svg text"),
-      strokeDashoffset: 0,
-      easing: 'easeInOutExpo',            
-      delay: function() { return anime.random(0, 3000); },
+      strokeDashoffset: [1000, 0],
+      opacity: [0.5, 1],
+      duration: 2000,
+      easing: 'easeInOutExpo',           
+      delay:  () => this.rand.getVal(this.count++ * 100) * delayMax + delay,
       update: (anim) => {
         //document.querySelectorAll("#svg text").forEach(item => item.style.opacity = Math.round(anim.progress)/100);
       }

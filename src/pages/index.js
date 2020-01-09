@@ -23,6 +23,7 @@ import Attribute from '../components/attribute';
 import { transparentize } from 'polished';
 import LetterRain from '../components/letterRain';
 import LineDrawing from '../components/lineDrawing';
+import AnimatedTitle from '../components/animatedTitle';
 
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
@@ -34,19 +35,11 @@ const IndexPage = ({theme, data, width}) => (
     <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <HalfBox display="flex" flexDirection="column" justifyContent={width==='lg'?"center":"start"}>
-            <Typography variant="h1" align='center'>
-              April Gray
-            </Typography>
-            <Typography variant="subtitle1" component='h1' align='center'>
-              Mobile/Web/Software
-            </Typography>
-            <Typography variant="subtitle1" component='h1' align='center'>
-              Developer
-            </Typography>
+            <AnimatedTitle title="April Gray" subtitles={["Web & Software", "Developer"]} />
           </HalfBox>
         </Grid>
           <Grid item xs={12} md={6}>
-            <LineDrawing svg={WordCloudStyled}/>
+            <LineDrawing svg={WordCloudStyled} delay={1100} delayMax={3000}/>
             <Attribute href="https://unsplash.com/@nathananderson" author="Anderson" />
             {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
             {/*<StyledImg fluid={data.wolf.childImageSharp.fluid}/>
