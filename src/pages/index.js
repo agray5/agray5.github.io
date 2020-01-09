@@ -9,6 +9,7 @@ import Typography from '../styles/Typography';
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import background from "../images/night.jpg"
+import forest from "../images/forest.png"
 import WordCloud from "../images/wordcloud.svg"
 
 //Components
@@ -46,6 +47,7 @@ const IndexPage = ({theme, data, width}) => (
         </Grid>
           <Grid item xs={12} md={6}>
             <LineDrawing svg={WordCloudStyled}/>
+            <Attribute href="https://unsplash.com/@nathananderson" author="Anderson" />
             {/*<Title theme={theme} title="April Gray" subtitles={["Mobile/Web/Software", "Developer"]}/>*/}
             {/*<StyledImg fluid={data.wolf.childImageSharp.fluid}/>
             <StyledConstellations {...mapSizesToProps(withSizes)}/>
@@ -98,7 +100,9 @@ const Root = styled(Container)`
     width: 100%;
     overflow: hidden;
     //background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
-    background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ), 
+    background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ),
+    //linear-gradient(90deg, rgba(2,0,36,0) 0%, ${transparentize(0.6, Colors.grad)} 100%), 
+        url(${forest}) no-repeat center center fixed,
         url(${background}) no-repeat center center fixed;
     background-size: cover;
 
