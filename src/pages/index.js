@@ -81,7 +81,7 @@ const HalfBox = styled(Box)`
   top: 15%;
   left: 15%;
 
-  ${theme.breakpoints.down('md')} {
+  ${theme.breakpoints.down('sm')} {
     margin-top: 15%;
   }
 `
@@ -93,8 +93,8 @@ const Root = styled(Container)`
     width: 100%;
     overflow: hidden;
     //background: linear-gradient(${Colors.primary} 0%,rgba(0,0,0,1) 70%);
-    background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.1, Colors.grad)} 81.3% ),
-    //linear-gradient(90deg, rgba(2,0,36,0) 0%, ${transparentize(0.6, Colors.grad)} 100%), 
+    background: radial-gradient( circle farthest-corner at 10% 20%,  ${Colors.primary_dark} 0%, ${transparentize(0.15, Colors.grad)} 81.3% ),
+    //linear-gradient(90deg, rgba(2,0,36,0) 0%, ${transparentize(0.5, Colors.grad)} 100%), 
         url(${forest}) no-repeat center center fixed,
         url(${background}) no-repeat center center fixed;
     background-size: cover;

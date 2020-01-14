@@ -57,9 +57,10 @@ class AnimatedTitle extends React.Component{
         keyframes: [
           {opacity: 1},
           {opacity: 0},
-          {opacity: 1}
+          {opacity: 1}, 
+          {opacity: 0}
         ],
-        duration: 1000,
+        duration: 2000,
         loop: true
       })
   }
