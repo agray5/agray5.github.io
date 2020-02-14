@@ -9,14 +9,20 @@ export default {
   decorators: [withKnobs]
 };
 
-
-export const ButtonText = () => (
-  <Button>Hello</Button>
+const GenSkillBar = ({index = 1, Name = "HTML", Level = 1, Color = "#bbb"}) => (
+  <div style={{height: "30px"}}>
+    <Skillbar  name={text("Name "+index, Name)} level={number("Level "+index, Level)} color={color("Color "+index, Color)}/>
+  </div>
 )
 
 export const SkillBar = () => (
-  <div style={{height: "30px"}}>
-  <Skillbar  name={text("Name", "HTML")} level={number("Level", 1)} color={color("Color", "#bbb")}/>
+  <GenSkillBar />
+);
+
+export const SkillBars = () => (
+  <div>
+      <GenSkillBar index={1}  Name="HTML" Color="#12c2e6"/>
+      <GenSkillBar index={2} Name="JS" Level={2} Color="#4f0445"/>
   </div>
 );
 
