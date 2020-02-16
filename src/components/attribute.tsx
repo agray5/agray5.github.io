@@ -1,9 +1,14 @@
-import React, { Component, Children } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import theme from '../theme'
 
-class Attribute extends React.Component{
+export type AttributeProps = {
+    href: string
+    author: string
+}
+
+class Attribute extends React.Component<AttributeProps> {
 
     render(){
         return(
@@ -20,9 +25,8 @@ const StyledA = styled.a`
     right: 10px;
     bottom: 10px;
 
-    ${props => console.log("Theme", props.theme)}
     
-    background-color: ${theme.palette.background.main};
+    background-color: ${theme.palette.background.default};
     color: ${theme.palette.primary.main};
     text-decoration:none;
     padding:4px 6px;

@@ -7,6 +7,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
     {resolve: 'gatsby-plugin-react-svg'},
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,3 +35,7 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
 }
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
