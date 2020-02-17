@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 //Depends
 import styled from 'styled-components';
-import Title from '../components/title'
+import Title from '../components/atom/title'
 import SideImageGrad from '../components/sideImageGrad'
 
 //Assets 

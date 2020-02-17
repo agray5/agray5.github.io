@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import ImageHoverDiv from '../components/imageHoverDiv'
 
-import Title from '../components/title'
+import Title from '../components/atom/title'
 
 //Depends
 import styled from 'styled-components';

@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import styled from 'styled-components';
 import Drawer from '../styles/drawer';
 import LinkList from './linkList'
+import UserStatus from './molecule/UserStatus';
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import theme from '../../src/theme';
 import Header from '../../src/components/header';
 
@@ -22,7 +22,6 @@ const TopLayout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <MuiThemeProvider theme={theme}>
-          {console.log("links", links)}
           <CssBaseline />
           <Header links={links}/>
           {children}

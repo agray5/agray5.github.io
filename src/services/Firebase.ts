@@ -1,3 +1,11 @@
+// must be listed before other Firebase SDKs
+import * as firebase from "firebase/app";
+
+// Add the Firebase services that you want to use
+import "firebase/auth";
+import "firebase/firestore";
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyBunIWORlhaGujm13tZx-LQflk8zUSYZfM",
   authDomain: "website-13135.firebaseapp.com",
@@ -9,9 +17,12 @@ const firebaseConfig = {
   measurementId: "G-30W9PTP77Y"
 };
 
-class Firebase {
-  constructor() {
+firebase.initializeApp(firebaseConfig);
 
+class Firebase {
+  
+  login () {
+    
   }
 }
 

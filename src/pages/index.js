@@ -24,6 +24,7 @@ import { transparentize } from 'polished';
 import LetterRain from '../components/letterRain';
 import LineDrawing from '../components/lineDrawing';
 import AnimatedTitle from '../components/animatedTitle';
+import Layout from '../components/layout';
 
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
@@ -31,6 +32,7 @@ const mapSizesToProps = ({width, height}) => ({
 });
 
 const IndexPage = ({theme, data, width}) => (
+  <Layout>
   <Root maxWidth={false}>
     <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
@@ -49,6 +51,7 @@ const IndexPage = ({theme, data, width}) => (
             </Grid>
     </Grid>
   </Root>
+  </Layout>
 )
 
 export default withWidth()(IndexPage)

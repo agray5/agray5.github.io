@@ -8,26 +8,12 @@ import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import Header from './header'
 import theme from '../theme'
 import './layout.css'
+import UserStatus from '../../src/components/molecule/UserStatus';
 
 const Layout = ({ children }) => (
       <>
-        <Helmet
-          meta={[
-            { charset: 'utf-8', content:"text/html"},
-            { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
-            { name: 'description', content: 'Hi, I\'m April Gray. I build applications for web, mobile, and desktop use.' },
-          ]}
-        >
-          {/** Fonts */}
-          <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono|Sacramento" rel="stylesheet" />
-          <html lang="en" />
-        </Helmet>
-        <ThemeProvider theme={theme}>
-          <>
-          <CssBaseline />
-          {children}
-          </>
-        </ThemeProvider>
+        <UserStatus />
+        {children}
       </>
 )
 
