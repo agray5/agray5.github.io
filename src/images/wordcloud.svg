@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="600px" height="650px" viewBox="530 30 1 650">
+<defs>
+<style type="text/css"> @import url(https://fonts.googleapis.com/css?family=Pacifico); </style>
+</defs>
+<clipPath id="cp1">
+<path d="M 0,0 L 1024,0 L1024,768 L 0,768 z M 0,0 L 1280,0 L 1280,960 L 0,960 z" fill-rule="evenodd">
+</path>
+</clipPath>
+<g clip-path="url(#cp1)">
+</g>
+<rect x="230" y="30" width="600" height="650" opacity="0" stroke="#091c2b"  >
+</rect>
+<text x="-126.09840393066406" y="5.241331199999998" style="font: normal 52.413312px Pacifico" text-anchor="start" dy="20.716724110671937" opacity="1" stroke="#8793dd"   transform="translate(446, 344) rotate(-12)">applications</text>
+<text x="-102.22566986083984" y="5.241331199999998" style="font: normal 52.413312px Pacifico" text-anchor="start" dy="20.716724110671937" opacity="1" stroke="#6d98ba"   transform="translate(502, 428) rotate(-12)">developer</text>
+<text x="-96.90605163574219" y="5.241331199999998" style="font: normal 52.413312px Pacifico" text-anchor="start" dy="20.716724110671937" opacity="1" stroke="#3669a2"   transform="translate(524, 478) rotate(-12)">software</text>
+<text x="-41.08943176269531" y="5.241331199999998" style="font: normal 52.413312px Pacifico" text-anchor="start" dy="20.716724110671937" opacity="1" stroke="#c1d4f2"   transform="translate(454, 294) rotate(-12)">web</text>
+<text x="-89.44990539550781" y="4.586164799999999" style="font: normal 45.861647999999995px Pacifico" text-anchor="start" dy="18.127133596837943" opacity="1" stroke="#3669a2"   transform="translate(532, 526) rotate(-12)">developer</text>
+<text x="-84.79510498046875" y="4.586164799999999" style="font: normal 45.861647999999995px Pacifico" text-anchor="start" dy="18.127133596837943" opacity="1" stroke="#c1d4f2"   transform="translate(384, 264) rotate(-12)">software</text>
+<text x="-35.95423126220703" y="4.586164799999999" style="font: normal 45.861647999999995px Pacifico" text-anchor="start" dy="18.127133596837943" opacity="1" stroke="#3669a2"   transform="translate(536, 374) rotate(-12)">web</text>
+<text x="-35.95423126220703" y="4.586164799999999" style="font: normal 45.861647999999995px Pacifico" text-anchor="start" dy="18.127133596837943" opacity="1" stroke="#c1d4f2"   transform="translate(460, 390) rotate(-12)">web</text>
+<text x="-79.24840545654297" y="3.9309984" style="font: normal 39.309984px Pacifico" text-anchor="start" dy="15.537543083003953" opacity="1" stroke="#c1d4f2"   transform="translate(378, 220) rotate(-12)">javascript</text>
+<text x="-79.24840545654297" y="3.9309984" style="font: normal 39.309984px Pacifico" text-anchor="start" dy="15.537543083003953" opacity="1" stroke="#8793dd"   transform="translate(642, 560) rotate(-12)">javascript</text>
+<text x="-75.84895324707031" y="3.9309984" style="font: normal 39.309984px Pacifico" text-anchor="start" dy="15.537543083003953" opacity="1" stroke="#c1d4f2"   transform="translate(378, 180) rotate(-12)">feed-back</text>
+<text x="-39.437530517578125" y="3.9309984" style="font: normal 39.309984px Pacifico" text-anchor="start" dy="15.537543083003953" opacity="1" stroke="#edecf2"   transform="translate(368, 140) rotate(-12)">html</text>
+<text x="-66.04032135009766" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#6d98ba"   transform="translate(746, 598) rotate(-12)">javascript</text>
+<text x="-34.37109375" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#6d98ba"   transform="translate(374, 312) rotate(-12)">react</text>
+<text x="-34.37109375" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#3669a2"   transform="translate(526, 588) rotate(-12)">react</text>
+<text x="-39.29998016357422" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#3669a2"   transform="translate(448, 602) rotate(-12)">redux</text>
+<text x="-39.29998016357422" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#8793dd"   transform="translate(736, 562) rotate(-12)">redux</text>
+<text x="-32.86460876464844" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#8793dd"   transform="translate(408, 572) rotate(-12)">html</text>
+<text x="-19.46985626220703" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#c1d4f2"   transform="translate(512, 358) rotate(-12)">css</text>
+<text x="-19.46985626220703" y="3.2758319999999994" style="font: normal 32.75832px Pacifico" text-anchor="start" dy="12.94795256916996" opacity="1" stroke="#c1d4f2"   transform="translate(468, 414) rotate(-12)">css</text>
+<text x="-60.60057067871094" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#8793dd"   transform="translate(332, 110) rotate(-12)">material-ui</text>
+<text x="-54.31255340576172" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#c1d4f2"   transform="translate(718, 638) rotate(-12)">typescript</text>
+<text x="-47.40887451171875" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#8793dd"   transform="translate(278, 164) rotate(-12)">database</text>
+<text x="-47.40887451171875" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(318, 84) rotate(-12)">database</text>
+<text x="-34.72808074951172" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(302, 58) rotate(-12)">mobile</text>
+<text x="-27.496871948242188" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(554, 396) rotate(-12)">react</text>
+<text x="-24.536285400390625" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(524, 306) rotate(-12)">node</text>
+<text x="-24.536285400390625" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(588, 442) rotate(-12)">node</text>
+<text x="-21.36608123779297" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(428, 378) rotate(-12)">java</text>
+<text x="-21.117172241210938" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#3669a2"   transform="translate(352, 422) rotate(-12)">rxjs</text>
+<text x="-21.117172241210938" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#6d98ba"   transform="translate(528, 558) rotate(-12)">rxjs</text>
+<text x="-15.366287231445312" y="2.620665599999999" style="font: normal 26.206656px Pacifico" text-anchor="start" dy="10.358362055335968" opacity="1" stroke="#8793dd"   transform="translate(430, 472) rotate(-12)">api</text>
+<text x="-35.556640625" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#6d98ba"   transform="translate(582, 498) rotate(-12)">database</text>
+<text x="-30.329750061035156" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#8793dd"   transform="translate(360, 336) rotate(-12)">express</text>
+<text x="-30.329750061035156" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#6d98ba"   transform="translate(624, 584) rotate(-12)">express</text>
+<text x="-24.591957092285156" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#3669a2"   transform="translate(308, 548) rotate(-12)">jquery</text>
+<text x="-25.85938262939453" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#edecf2"   transform="translate(600, 544) rotate(-12)">ramda</text>
+<text x="-25.85938262939453" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#edecf2"   transform="translate(364, 204) rotate(-12)">ramda</text>
+<text x="-15.837882995605469" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#edecf2"   transform="translate(350, 454) rotate(-12)">rxjs</text>
+<text x="-18.402206420898438" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#6d98ba"   transform="translate(438, 278) rotate(-12)">node</text>
+<text x="-16.024551391601562" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#3669a2"   transform="translate(342, 478) rotate(-12)">java</text>
+<text x="-11.524711608886719" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#edecf2"   transform="translate(462, 460) rotate(-12)">api</text>
+<text x="-11.524711608886719" y="1.9654992" style="font: normal 19.654992px Pacifico" text-anchor="start" dy="7.768771541501977" opacity="1" stroke="#3669a2"   transform="translate(442, 320) rotate(-12)">api</text>
+<text x="-27.464111328125" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#edecf2"   transform="translate(478, 562) rotate(-12)">processing</text>
+<text x="-26.16722869873047" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#8793dd"   transform="translate(672, 592) rotate(-12)">bootstrap</text>
+<text x="-23.69788360595703" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#c1d4f2"   transform="translate(746, 528) rotate(-12)">firestore</text>
+<text x="-21.36608123779297" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#edecf2"   transform="translate(268, 140) rotate(-12)">firebase</text>
+<text x="-15.857528686523438" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#c1d4f2"   transform="translate(378, 294) rotate(-12)">polish</text>
+<text x="-15.857528686523438" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#3669a2"   transform="translate(450, 230) rotate(-12)">polish</text>
+<text x="-18.208969116210938" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#edecf2"   transform="translate(328, 304) rotate(-12)">python</text>
+<text x="-18.208969116210938" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#c1d4f2"   transform="translate(340, 516) rotate(-12)">python</text>
+<text x="-13.669830322265625" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#6d98ba"   transform="translate(512, 294) rotate(-12)">axios</text>
+<text x="-11.252883911132812" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#3669a2"   transform="translate(510, 282) rotate(-12)">sass</text>
+<text x="-6.3862457275390625" y="1.3103327999999994" style="font: normal 13.103328px Pacifico" text-anchor="start" dy="5.179181027667984" opacity="1" stroke="#c1d4f2"   transform="translate(520, 400) rotate(-12)">p5</text>
+<text x="-14.278953552246094" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#6d98ba"   transform="translate(436, 524) rotate(-12)">postgresql</text>
+<text x="-14.278953552246094" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#6d98ba"   transform="translate(404, 244) rotate(-12)">postgresql</text>
+<text x="-11.848922729492188" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#8793dd"   transform="translate(414, 410) rotate(-12)">firestore</text>
+<text x="-11.848922729492188" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#8793dd"   transform="translate(510, 506) rotate(-12)">firestore</text>
+<text x="-11.848922729492188" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#c1d4f2"   transform="translate(434, 538) rotate(-12)">firestore</text>
+<text x="-10.683029174804688" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#c1d4f2"   transform="translate(336, 414) rotate(-12)">firebase</text>
+<text x="-10.109886169433594" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#6d98ba"   transform="translate(464, 478) rotate(-12)">express</text>
+<text x="-10.109886169433594" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#c1d4f2"   transform="translate(500, 274) rotate(-12)">express</text>
+<text x="-8.197303771972656" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#3669a2"   transform="translate(462, 374) rotate(-12)">jquery</text>
+<text x="-8.197303771972656" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#6d98ba"   transform="translate(522, 462) rotate(-12)">jquery</text>
+<text x="-8.619781494140625" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#c1d4f2"   transform="translate(462, 366) rotate(-12)">ramda</text>
+<text x="-5.626434326171875" y="0.6551663999999997" style="font: normal 6.551664px Pacifico" text-anchor="start" dy="2.589590513833992" opacity="1" stroke="#8793dd"   transform="translate(540, 350) rotate(-12)">sass</text>
+</svg>

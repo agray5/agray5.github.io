@@ -23,8 +23,8 @@ const AboutPage = (props) => (
             <p> I graduated with a Bachelor's in Computer Science in 2018, during which 
                 I learned many important basics, such as networking, and databases.</p>
             <p> Through my love of learning, and passion for coding, I am also self taught 
-                in web development, with experiance in React, Gatsby, Sass, and other web frameworks.</p>
-            <p> Since the Summer of 2018 I have done freelance work in Android and IOS applications. </p> 
+                in web development, with experience in React, Redux, Sass, and other web frameworks.</p>
+            <p> Since the Summer of 2018 I have done freelance work involving React, Angular, Android, IOS, and other technologies. </p> 
         </StyledTextContainer>
 
         {/*<SkillList skillNames={skillNames} />*/}

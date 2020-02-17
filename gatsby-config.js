@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
+    `gatsby-plugin-transition-link`,
     {resolve: 'gatsby-plugin-react-svg'},
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,6 +31,14 @@ module.exports = {
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
+    /*{
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: '/src/images/' // See below to configure properly
+        }
+      }
+    }*/
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
