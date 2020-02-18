@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../theme'
+import theme from '../../theme'
 
 export type AttributeProps = {
     href: string
@@ -26,7 +26,7 @@ const StyledA = styled.a`
     bottom: 10px;
 
     
-    background-color: ${theme.palette.background.default};
+    background-color: ${theme.palette.background.dark};
     color: ${theme.palette.primary.main};
     text-decoration:none;
     padding:4px 6px;

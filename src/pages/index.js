@@ -19,7 +19,7 @@ import withWidth from '@material-ui/core/withWidth';
 
 //Assets 
 import theme, {Colors} from '../theme'
-import Attribute from '../components/attribute';
+import Attribute from '../components/atom/attribute';
 import { transparentize } from 'polished';
 import LetterRain from '../components/letterRain';
 import LineDrawing from '../components/lineDrawing';

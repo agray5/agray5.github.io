@@ -1,16 +1,31 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import { applyStyles, DarkContained } from '../../styles';
+import Chip from '@material-ui/core/Chip';
+import { applyStyles, DarkContained, Absolute, Depth } from '../../styles';
+import styled from 'styled-components';
+import Firebase from '../../services/Firebase';
+import Avatar from '@material-ui/core/Avatar';
 
-class UserStatus extends React.Component {
+export type UserStatusProps = {
+  className?: string
+  login: () => {}
+}
+
+class UserStatus extends React.Component<UserStatusProps> {
+
   render () {
     return (
-    <Box style={{background: 'red', zIndex: 1000, position: "absolute", left: 100}}>
-      Hello
-    </Box>
+    <Chip 
+      className={this.props.className} 
+      label={!Firebase.getUser()?'Sign in for full experience':'User'}
+      onClick={this.props.login}
+    />
     )
   }
 }
 
-const Y = () => <div>sfgfg</div>
-export default applyStyles(UserStatus, DarkContained);
+export default applyStyles(UserStatus, 
+  DarkContained, 
+  Absolute({right: 100, top: 20}), 
+  Depth(1)
+  );
