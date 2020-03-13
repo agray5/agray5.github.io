@@ -4,19 +4,29 @@ import styled, { AnyStyledComponent, ThemedStyledProps, StyledComponentPropsWith
 
 import theme from '../theme'
 
+export type jssValue = string | number;
+export const maybe = <T extends any>(name: string, value: T) => `${name}: ${value || 'unset'}${typeof value === 'number'?'px':''};`;
 
 export const DarkContained = () => `
-  background-color: ${theme.palette.background.default};
-  color: blue;
+  background-color: ${theme.palette.background.dark} !important;
+  color: ${theme.palette.primary.main} !important;
 `
-const U = () => (
-  <div>OKOOJO</div>
-);
+export const Absolute = ({top, left, right, bottom}: {top?: jssValue, left?: jssValue, right?: jssValue, bottom?: jssValue} = {}) => 
+  () => `
+  position: absolute !important;
 
-const K = styled(U)`
-  color: blue;
+  ${maybe('top', top)}
+  ${maybe('bottom', bottom)}
+  ${maybe('left', left)}
+  ${maybe('right', right)}
+`
+
+export const Depth = (amount: 1 | 2 | 3 | 4) => () => `
+  z-index: ${amount};
 `
 
 export const applyStyles = <C extends typeof Component>(comp: C, ...styles: ((props: ThemedStyledProps<StyledComponentPropsWithRef<C> & {}, any>) => string)[]) => {
-  return K
+  return styled(comp)`
+    ${props => styles.map(style => style(props)).join('')}
+  `
 }

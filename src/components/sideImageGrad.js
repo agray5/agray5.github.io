@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 //Depends
 import styled from 'styled-components';
-import Attribute from '../components/attribute'
+import Attribute from './atom/attribute'
 
 //Assets 
 import theme, {Colors} from '../theme'

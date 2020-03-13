@@ -20,9 +20,13 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 class Firebase {
-  
-  login () {
-    
+
+  loginWithPopup () {
+    return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
+  getUser () {
+    return firebase.auth().currentUser;
   }
 }
 
