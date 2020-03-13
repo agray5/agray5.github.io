@@ -3,6 +3,12 @@
 $cross-width: 36px;
 $cross-height: 30px;
 
+
+body {
+  font-size: 16px;
+  font-family: Oxygen Mono, monospace;
+}
+
 .bm-cross-button {
     width: $cross-width !important;
     height: $cross-height !important;

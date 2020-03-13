@@ -26,7 +26,7 @@ const StyledA = styled.a`
     bottom: 10px;
 
     
-    background-color: ${theme.palette.background.default};
+    background-color: ${theme.palette.secondary.main};
     color: ${theme.palette.primary.main};
     text-decoration:none;
     padding:4px 6px;

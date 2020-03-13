@@ -8,6 +8,7 @@ import Title from '../components/atom/title'
 import styled from 'styled-components';
 import theme from '../theme'
 import {media} from '../utils/mediaQueries'
+import Gallery from 'react-photo-gallery';
 
 const titles = ['Prompt Generator', 'Weather App', 'Calender', 'Processing Tic-Tac-Toe',
                 'Random 2D Map', 'Mock Airplane Reservation Server'];
@@ -38,7 +39,8 @@ const Portfolio = (props) => {
     <Layout>
         <Root theme={theme}>
         <Title title="Portfolio" theme={{...theme}}/>
-        <Container theme={theme}>
+        <Gallery images={images.map(img => ({...img, src: img.img})) }/>
+        {/*<Container theme={theme}>
             {portfolioImgs.map(((img, index) => {
                 return (<ImageHoverDiv 
                     {...images[index]}
@@ -47,7 +49,7 @@ const Portfolio = (props) => {
                     height= "200px"
                     key={index}/>)
             }))}
-        </Container>
+          </Container>*/}
         </Root>
     </Layout>
   )

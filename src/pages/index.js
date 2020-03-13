@@ -26,6 +26,7 @@ import LineDrawing from '../components/lineDrawing';
 import AnimatedTitle from '../components/animatedTitle';
 import Layout from '../components/layout';
 
+
 const mapSizesToProps = ({width, height}) => ({
     width: width?width:800,
   height: height?height:700,

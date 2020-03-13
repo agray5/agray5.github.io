@@ -56,7 +56,9 @@ const StyledTextContainer = styled.div`
   height: 80%;
   width: 80%
   overflow-y: auto;
-  color: ${Colors.menu};
+  color: ${theme.palette.primary.dark};
+  font-weight: 600;
+  font-size: 16px;
   ${media.desktop`width: 40%; margin-top: 70px;`}
 `;
 
