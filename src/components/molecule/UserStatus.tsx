@@ -14,18 +14,20 @@ export type UserStatusProps = {
 class UserStatus extends React.Component<UserStatusProps> {
 
   render () {
-    return (
+    return (<div></div>)
+    /*return (
     <Chip 
       className={this.props.className} 
       label={!Firebase.getUser()?'Sign in for full experience':'User'}
       onClick={this.props.login}
+      
     />
-    )
+    )*/
   }
 }
 
 export default applyStyles(UserStatus, 
   DarkContained, 
   Absolute({right: 100, top: 20}), 
-  Depth(1)
+  Depth(2)
   );
